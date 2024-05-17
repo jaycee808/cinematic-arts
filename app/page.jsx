@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const HomePage = () => {
     return (
-        <div>Home Page</div>
+        <div>
+            <h2>This is the Home Page</h2>
+            <Link href="/courseUnits">Choose Course Units</Link>
+        </div>
     )
 }
 

@@ -6,6 +6,7 @@ const HomePage = () => {
         <div>
             <h2>This is the Home Page</h2>
             <Link href="/courseUnits">Choose Course Units</Link>
+            <Link href="/timetable">Timetable</Link>
         </div>
     )
 }

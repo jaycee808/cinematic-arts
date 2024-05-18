@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import connectDatabase from '../config/database.js'
 
-const HomePage = () => {
+const HomePage = async () => {
+    await connectDatabase();
+    
     return (
         <div>
             <h2>This is the Home Page</h2>

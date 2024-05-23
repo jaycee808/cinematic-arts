@@ -34,14 +34,22 @@ const TimetablePage = () => {
                             <h2 className="text-3xl uppercase font-semibold mb-2 text-slate-200">{unit.title}</h2>
                             <hr></hr>
                             <p className="text-lg uppercase text-slate-300 mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
-                            <p className="text-slate-200 mb-4">{unit.overview}</p>
-                            <ul className="list-disc list-inside text-slate-300 mb-4">
-                                {unit.schedule.map((scheduleItem, index) => (
-                                    <li key={index}>
-                                        {scheduleItem.classType} - {scheduleItem.dayOfWeek} - {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p className="text-slate-200 mb-4">{unit.overview}</p>
+                                </div>
+                                <div>
+                                    <ul className="list-none uppercase text-slate-300 mb-4">
+                                        {unit.schedule.map((scheduleItem, index) => (
+                                            <li key={index} className="py-2">
+                                                {scheduleItem.classType}
+                                                <br></br>
+                                                {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -54,16 +62,22 @@ const TimetablePage = () => {
                                 <h2 className="text-3xl uppercase font-semibold mb-2 text-slate-200">{unit.title}</h2>
                                 <hr></hr>
                                 <p className="text-lg uppercase text-slate-300 mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
-                                <p className="text-slate-200 mb-4">{unit.overview}</p>
-                                <ul className="list-none uppercase text-slate-300 mb-4 columns-2">
-                                {unit.schedule.map((scheduleItem, index) => (
-                                    <li key={index}>
-                                        {scheduleItem.classType}
-                                        <br></br>
-                                        {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                    </li>
-                                ))}
-                            </ul>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <p className="text-slate-200 mb-4">{unit.overview}</p>
+                                    </div>
+                                    <div>
+                                        <ul className="list-none uppercase text-slate-300 mb-4">
+                                            {unit.schedule.map((scheduleItem, index) => (
+                                                <li key={index} className="py-2">
+                                                    {scheduleItem.classType}
+                                                    <br></br>
+                                                    {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

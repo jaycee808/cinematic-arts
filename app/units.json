@@ -18,13 +18,6 @@
                 "dayOfWeek": "Monday",
                 "classStart": "9am",
                 "classEnd": "11am"
-            },
-            {
-                "classType": "Screening",
-                "timeOfDay": "Afternoon",
-                "dayOfWeek": "Tuesday",
-                "classStart": "3pm",
-                "classEnd": "5pm"
             }
         ]
     },
@@ -69,13 +62,6 @@
                 "dayOfWeek": "Thursday",
                 "classStart": "2pm",
                 "classEnd": "4pm"
-            },
-            {
-                "classType": "Seminar",
-                "timeOfDay": "Morning",
-                "dayOfWeek": "Friday",
-                "classStart": "12pm",
-                "classEnd": "1pm"
             }
         ]
     },
@@ -159,18 +145,11 @@
         "status": "Optional",
         "schedule":[
             {
-                "classType": "Lecture",
+                "classType": "Workshop",
                 "timeOfDay": "Afternoon",
                 "dayOfWeek": "Wednesday",
                 "classStart": "2pm",
-                "classEnd": "4pm"
-            },
-            {
-                "classType": "Workshop",
-                "timeOfDay": "Afternoon",
-                "dayOfWeek": "Friday",
-                "classStart": "2pm",
-                "classEnd": "4pm"
+                "classEnd": "5pm"
             }
         ]
     }

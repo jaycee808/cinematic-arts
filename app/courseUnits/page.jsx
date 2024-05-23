@@ -30,30 +30,30 @@ const CourseUnitsPage = () => {
     };
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-white text-black">
             <header className="mb-8">
                 <div className="container mx-auto px-4 py-6">
-                    <h1 className="text-4xl font-bold tracking-tight text-slate-300">Course Units</h1>
+                    <h1 className="text-4xl font-bold tracking-tight">Course Units</h1>
                     <nav className="mt-4">
-                        <Link href="/timetable" className="text-slate-200 hover:underline">Go to Timetable</Link>
+                        <Link href="/timetable" className="text-black hover:underline">Go to Timetable</Link>
                     </nav>
                 </div>
             </header>
 
             <main className="container mx-auto px-4">
-                <h2 className="text-3xl font-semibold mb-6 text-slate-300">Mandatory Units</h2>
+                <h2 className="text-3xl font-semibold mb-6">Mandatory Units</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
                     {mandatoryUnits.map(unit => (
-                        <div key={unit._id} className="bg-black/80 p-6 border border-slate-700">
-                            <h2 className="text-3xl uppercase font-semibold mb-2 text-slate-200">{unit.title}</h2>
+                        <div key={unit._id} className="bg-slate-50 p-6 border border-slate-300">
+                            <h2 className="text-3xl uppercase font-semibold mb-2">{unit.title}</h2>
                             <hr></hr>
-                            <p className="text-lg uppercase text-slate-300 mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
+                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <p className="text-slate-200 mb-4">{unit.overview}</p>
+                                    <p className="mb-4">{unit.overview}</p>
                                 </div>
                                 <div>
-                                    <ul className="list-none text-lg text-slate-300 mb-4">
+                                    <ul className="list-none text-lg mb-4">
                                         {unit.schedule.map((scheduleItem, index) => (
                                             <li key={index}>
                                                 {scheduleItem.classType}
@@ -68,19 +68,19 @@ const CourseUnitsPage = () => {
                     ))}
                 </div>
 
-                <h2 className="text-3xl font-semibold mb-6 text-slate-300">Optional Units</h2>
+                <h2 className="text-3xl font-semibold mb-6">Optional Units</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {optionalUnits.map(unit => (
-                        <div key={unit._id} className="bg-black/80 p-6 border border-slate-700">
-                            <h2 className="text-3xl uppercase font-semibold mb-2 text-slate-200">{unit.title}</h2>
+                        <div key={unit._id} className="bg-slate-50 p-6 border border-slate-300">
+                            <h2 className="text-3xl uppercase font-semibold mb-2">{unit.title}</h2>
                             <hr></hr>
-                            <p className="text-lg uppercase text-slate-300 mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
+                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <p className="text-slate-200 mb-4">{unit.overview}</p>
+                                    <p className="mb-4">{unit.overview}</p>
                                 </div>
                                 <div>
-                                    <ul className="list-none text-lg text-slate-300 mb-4">
+                                    <ul className="list-none text-lg mb-4">
                                         {unit.schedule.map((scheduleItem, index) => (
                                             <li key={index}>
                                                 {scheduleItem.classType}
@@ -93,7 +93,7 @@ const CourseUnitsPage = () => {
                             </div>
                             <button
                                 onClick={() => handleSelectUnit(unit)}
-                                className={`flex justify-start uppercase text-lg w-full py-2 px-4 mt-4 rounded-sm text-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-rose-900' : 'bg-red-800 hover:bg-red-600'}`}
+                                className={`flex justify-start uppercase text-lg w-full py-2 px-4 mt-4 rounded-sm text-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-black' : 'bg-black hover:bg-gray-800'}`}
                             >
                                 {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Deselect' : 'Select'}
                             </button>
@@ -103,8 +103,8 @@ const CourseUnitsPage = () => {
 
                 {selectedUnits.length > 0 && (
                     <div className="mt-8">
-                        <h3 className="text-2xl font-semibold mb-4 text-red-600">Selected Units:</h3>
-                        <ul className="list-disc list-inside text-slate-300">
+                        <h3 className="text-2xl font-semibold mb-4">Selected Units:</h3>
+                        <ul className="list-disc list-inside">
                             {selectedUnits.map(unit => (
                                 <li key={unit._id}>{unit.title}</li>
                             ))}

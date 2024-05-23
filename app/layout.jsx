@@ -10,7 +10,7 @@ export const metadata = {
 const PrimaryLayout = ({ children }) => {
     return (
         <html lang="en">
-            <body className="bg-black">
+            <body>
                 <NavBar />
                 <div>{ children }</div>
                 <Footer />

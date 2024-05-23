@@ -8,15 +8,6 @@
     font-family: 'Karla', sans-serif;
 }
 
-body {
-    background-image: url('/assets/bg-1.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #121212; /* fallback */
-}
-
 hr {
     border-width: 1px;
 }

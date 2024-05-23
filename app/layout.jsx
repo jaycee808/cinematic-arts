@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets//styles/globals.css';
+import '../assets/styles/globals.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
@@ -19,4 +19,4 @@ const PrimaryLayout = ({ children }) => {
     )
 }
 
-export default PrimaryLayout
+export default PrimaryLayout;

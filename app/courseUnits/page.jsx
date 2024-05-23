@@ -54,7 +54,7 @@ const CourseUnitsPage = () => {
                             </ul>
                             <button
                                 onClick={() => handleSelectUnit(unit)}
-                                className={`w-full py-2 px-4 rounded-sm text-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-cyan-700' : 'bg-blue-900 hover:bg-blue-700'}`}
+                                className={`w-full py-2 px-4 rounded-sm text-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-red-700' : 'bg-blue-900 hover:bg-blue-700'}`}
                             >
                                 {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Deselect' : 'Select'}
                             </button>

@@ -13,7 +13,7 @@ const TimetablePage = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-slate-950">
+        <div className="min-h-screen">
             <header className="mb-8">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight text-slate-300">Your Timetable</h1>

@@ -1,6 +1,6 @@
 [
     {
-        "_id": "01",
+        "_id": "101",
         "year": "1",
         "title": "Introduction to Film Studies",
         "teacher": "Dr Olivia Matthews",
@@ -29,36 +29,7 @@
         ]
     },
     {
-        "_id": "02",
-        "year": "1",
-        "title": "Film Theory",
-        "teacher": "Professor Maya Patel",
-        "overview": "Examination of major theoretical frameworks in film, including formalism, realism, and auteur theory.",
-        "description": "This module delves into significant theoretical perspectives that have shaped film studies, such as formalism, realism, and auteur theory. Students will explore how these theories apply to the analysis of films and filmmakers. The course includes critical discussions and comparative analyses to deepen understanding of film as an art form.",
-        "aims": ["Understand and critically engage with major film theories.", "Apply theoretical frameworks to film analysis.", "Enhance critical thinking and analytical skills."],
-        "recommendedWatching": ["Battleship Potemkin", "Breathless", "Persona"],
-        "recommendedReading": "Film Theory and Criticism edited by Leo Braudy and Marshall Cohen",
-        "credits": "20",
-        "status": "Mandatory",
-        "schedule":[
-            {
-                "classType": "Lecture",
-                "timeOfDay": "Morning",
-                "dayOfWeek": "Monday",
-                "classStart": "11am",
-                "classEnd": "1pm"
-            },
-            {
-                "classType": "Seminar",
-                "timeOfDay": "Morning",
-                "dayOfWeek": "Tuesday",
-                "classStart": "10am",
-                "classEnd": "11am"
-            }
-        ]
-    },
-    {
-        "_id": "03",
+        "_id": "102",
         "year": "1",
         "title": "Film Production Fundamentals",
         "teacher": "Dr Stephen Turner",
@@ -68,7 +39,7 @@
         "recommendedWatching": [],
         "recommendedReading": "In the Blink of an Eye by Walter Murch",
         "credits": "20",
-        "status": "Optional",
+        "status": "Mandatory",
         "schedule": [
             {
                 "classType": "Workshop",
@@ -80,7 +51,7 @@
         ]
     },
     {
-        "_id": "04",
+        "_id": "104",
         "year": "1",
         "title": "World Cinema",
         "teacher": "Professor Rajesh Kapoor",
@@ -109,7 +80,7 @@
         ]
     },
     {
-        "_id": "05",
+        "_id": "105",
         "year": "1",
         "title": "Screenwriting Fundamentals",
         "teacher": "Professor Michael Hughes",
@@ -131,7 +102,7 @@
         ]
     },
     {
-        "_id": "06",
+        "_id": "106",
         "year": "1",
         "title": "Visual Effects & Cinematography",
         "teacher": "Dr Jessica Wong",
@@ -153,7 +124,7 @@
         ]
     },
     {
-        "_id": "07",
+        "_id": "107",
         "year": "1",
         "title": "History of Television",
         "teacher": "Professor Anna Martinez",
@@ -175,7 +146,7 @@
         ]
     },
     {
-        "_id": "08",
+        "_id": "108",
         "year": "1",
         "title": "Sound Design for Film",
         "teacher": "Dr Daniel Collins",

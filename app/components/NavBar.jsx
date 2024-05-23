@@ -11,7 +11,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="bg-slate-950 text-slate-100 p-4">
+        <nav className="p-4">
             <div className="flex items-center justify-between">
                 <div className="logo text-6xl font-bold">
                     <Link href="/">CINEMATIC ARTS.</Link>

@@ -27,7 +27,7 @@ const CourseUnitsPage = () => {
     };
 
     return (
-        <div>
+        <div className="text-slate-100 bg-slate-950">
             <h2>This is the Course Units Page</h2>
             <Link href="/">Go Home</Link>
             <Link href="/timetable">Go to Timetable</Link>

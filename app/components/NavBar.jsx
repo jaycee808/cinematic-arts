@@ -11,12 +11,12 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="p-4">
+        <nav className="p-4 bg-slate-950">
             <div className="flex items-center justify-between">
-                <div className="logo text-6xl font-bold">
+                <div className="logo text-6xl font-bold text-slate-300">
                     <Link href="/">CINEMATIC ARTS.</Link>
                 </div> 
-                <div className={`nav-menu text-2xl px-10 ${isMenuOpen ? 'block' : 'hidden'} md:flex items-center space-x-12`}>
+                <div className={`nav-menu text-2xl px-10 ${isMenuOpen ? 'block' : 'hidden'} md:flex items-center space-x-12 text-slate-400`}>
                     <Link href="/courseUnits">COURSE UNITS</Link>
                     <Link href="/timetable">TIMETABLE</Link>
                 </div>

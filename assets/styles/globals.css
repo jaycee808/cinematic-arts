@@ -16,3 +16,7 @@ body {
     background-repeat: no-repeat;
     background-color: #121212; /* fallback */
 }
+
+hr {
+    border-width: 2px;
+}

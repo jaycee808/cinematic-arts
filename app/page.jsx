@@ -19,12 +19,12 @@ const HomePage = async () => {
                     </p>
                     <div className="flex space-x-4">
                         <Link href="/courseUnits">
-                            <button className="w-full md:w-auto py-2 px-8 rounded-sm bg-blue-900 hover:bg-red-700 text-white text-lg">
+                            <button className="w-full md:w-auto py-2 px-8 rounded-sm bg-red-800 hover:bg-red-600 text-white text-lg">
                                 Choose Course Units
                             </button>
                         </Link>
                         <Link href="/timetable">
-                            <button className="w-full md:w-auto py-2 px-8 rounded-sm bg-blue-900 hover:bg-red-700 text-white text-lg">
+                            <button className="w-full md:w-auto py-2 px-8 rounded-sm bg-red-800 hover:bg-red-600 text-white text-lg">
                                 Timetable
                             </button>
                         </Link>

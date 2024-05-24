@@ -9,14 +9,6 @@ hr {
     border-width: 2px;
 }
 
-.logo {
-    font-family: "Anton", sans-serif;
-}
-
-.nav-link {
-    font-family: "Work Sans", sans-serif;
-}
-
-h1, h2, h3, p, button, ul, li {
-    font-family: "Work Sans", sans-serif;
+* {
+    font-family: 'Karla', sans-serif;
 }

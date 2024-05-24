@@ -13,7 +13,7 @@ const NavBar = () => {
     return (
         <nav className="relative p-4 bg-white shadow">
             <div className="flex items-center justify-between">
-                <div className="logo text-4xl font-bold text-black">
+                <div className="logo text-4xl lg:text-8xl font-bold text-black font-display">
                     <Link href="/">CINEMATIC ARTS.</Link>
                 </div> 
                 <div className="md:hidden">
@@ -30,8 +30,8 @@ const NavBar = () => {
                     </button>
                 </div>
                 <div className="hidden md:flex items-center space-x-12 text-black">
-                    <Link href="/courseUnits" className="text-2xl">COURSE UNITS</Link>
-                    <Link href="/timetable" className="text-2xl">TIMETABLE</Link>
+                    <Link href="/courseUnits" className="text-2xl font-sans">COURSE UNITS</Link>
+                    <Link href="/timetable" className="text-2xl font-sans">TIMETABLE</Link>
                 </div>
             </div>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>

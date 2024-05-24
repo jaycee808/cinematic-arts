@@ -9,9 +9,9 @@ const HomePage = async () => {
     return (
         <div className="min-h-fit bg-black text-white">
             <div className="relative">
-                <img 
+                <img
                     src="/assets/images/1.png" 
-                    alt="Banner Image" 
+                    alt="Banner Image"
                     className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">

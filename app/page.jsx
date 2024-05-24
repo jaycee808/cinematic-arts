@@ -22,7 +22,7 @@ const HomePage = async () => {
             </div>
             <div className="container mx-auto px-4 py-10">
                 <header className="mb-4">
-                    <h1 className="text-4xl font-bold tracking-tight text-red-500">
+                    <h1 className="text-4xl font-bold tracking-tight">
                         Welcome
                     </h1>
                 </header>
@@ -35,7 +35,7 @@ const HomePage = async () => {
                     </p>
                     <div className="flex space-x-4 w-fit border-solid border-2 border-white">
                         <Link href="/courseUnits">
-                            <button className="w-fit py-2 px-8 rounded-sm bg-red hover:bg-bonfire text-white text-lg uppercase font-bold">
+                            <button className="w-fit py-2 px-8 rounded-sm bg-red-900 hover:bg-red-600 text-white text-lg uppercase font-bold">
                                 Choose Course Units
                             </button>
                         </Link>

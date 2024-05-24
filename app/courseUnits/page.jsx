@@ -46,7 +46,7 @@ const CourseUnitsPage = () => {
                     {mandatoryUnits.map(unit => (
                         <div key={unit._id} className="bg-zinc-950 p-6 border border-zinc-600">
                             <h2 className="text-3xl uppercase font-semibold mb-2">{unit.title}</h2>
-                            <hr className="border-red-500"/>
+                            <hr/>
                             <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-gray-400">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -93,7 +93,7 @@ const CourseUnitsPage = () => {
                             </div>
                             <button
                                 onClick={() => handleSelectUnit(unit)}
-                                className={`flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-white text-black ' : 'bg-red hover:bg-bonfire'}`}
+                                className={`flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-white text-black ' : 'bg-red-900 hover:bg-red-600'}`}
                             >   
                                 <div className="font-bold text-center">
                                 {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}

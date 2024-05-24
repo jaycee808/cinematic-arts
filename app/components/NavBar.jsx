@@ -30,15 +30,18 @@ const NavBar = () => {
                     </button>
                 </div>
                 <div className="hidden md:flex items-center space-x-12 text-black">
-                    <Link href="/courseUnits" className="text-2xl font-sans">COURSE UNITS</Link>
-                    <Link href="/timetable" className="text-2xl font-sans">TIMETABLE</Link>
+                    <Link href="/courseUnits" className="text-2xl font-display">COURSE UNITS</Link>
+                    <Link href="/timetable" className="text-2xl font-display">TIMETABLE</Link>
                 </div>
             </div>
             <div className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>
             <div className={`fixed top-0 left-0 w-3/4 max-w-xs h-full bg-white z-20 p-4 transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col space-y-4 text-black">
-                    <Link href="/courseUnits" className="text-2xl" onClick={toggleMenu}>COURSE UNITS</Link>
-                    <Link href="/timetable" className="text-2xl" onClick={toggleMenu}>TIMETABLE</Link>
+                    <div className="logo text-6xl font-bold text-black font-display" onClick={toggleMenu}>
+                        <Link href="/">CINEMATIC ARTS.</Link>
+                    </div>
+                    <Link href="/courseUnits" className="text-2xl font-display" onClick={toggleMenu}>COURSE UNITS</Link>
+                    <Link href="/timetable" className="text-2xl font-display" onClick={toggleMenu}>TIMETABLE</Link>
                 </div>
             </div>
         </nav>

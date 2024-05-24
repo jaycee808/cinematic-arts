@@ -15,7 +15,7 @@ const HomePage = async () => {
                     className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">
-                    <h1 className="text-4xl font-bold text-white text-center">
+                    <h1 className="text-4xl font-bold text-white text-center font-sans">
                         The Cinematic Arts Institute
                     </h1>
                 </div>
@@ -27,15 +27,15 @@ const HomePage = async () => {
                     </h1>
                 </header>
                 <main>
-                    <p className="mb-4 text-lg">
+                    <p className="mb-4 text-lg font-sans">
                         At The Cinematic Arts Institute, we're passionate about nurturing the next generation of storytellers, filmmakers, and critical thinkers.
                     </p>
-                    <p className="mb-4 text-lg">
+                    <p className="mb-4 text-lg font-sans">
                         Our BA (Hons) Cinematic Arts programme offers a comprehensive exploration of the theory, history, and practice of cinema, preparing students for exciting careers in the dynamic world of film and television.
                     </p>
                     <div className="flex space-x-4 w-fit border-solid border-2 border-white">
                         <Link href="/courseUnits">
-                            <button className="w-fit py-2 px-8 rounded-sm bg-red hover:bg-bonfire text-white text-lg uppercase font-bold">
+                            <button className="w-fit py-2 px-8 rounded-sm bg-red hover:bg-bonfire text-white text-lg uppercase font-bold font-sans">
                                 Choose Course Units
                             </button>
                         </Link>

@@ -19,6 +19,10 @@ module.exports = {
         'bonfire': '#DA1A32',
         'embers': '#A00C30',
         'neon': '#EDFF00',
+      },
+      fontFamily: {
+        sans: ['Work Sans', 'Inter','Helvetica', 'ui-sans-serif'],
+        logo: ['Anton', 'Work Sans', 'Inter', 'ui-sans-serif'],
       }
     },
   },

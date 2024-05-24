@@ -15,7 +15,7 @@ const NavBar = () => {
             <div className="flex items-center justify-between">
                 <div className="logo text-4xl font-bold text-black">
                     <Link href="/">CINEMATIC ARTS.</Link>
-                </div> 
+                </div>
                 <div className="md:hidden">
                     <button type="button" className="p-2" onClick={toggleMenu}>
                         <svg
@@ -23,9 +23,23 @@ const NavBar = () => {
                             width="40"
                             height="20"
                             className="fill-current text-black">
-                            <rect width="100" height="10"></rect>
-                            <rect y="30" width="75" height="10"></rect>
-                            <rect y="60" width="50" height="10"></rect>
+                            <rect
+                                width="100"
+                                height="10"
+                                className={`transition-transform duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-10 origin-center' : 'origin-left'}`}
+                            ></rect>
+                            <rect
+                                y="30"
+                                width="100"
+                                height="10"
+                                className={`transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
+                            ></rect>
+                            <rect
+                                y="60"
+                                width="100"
+                                height="10"
+                                className={`transition-transform duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-15 origin-center' : 'origin-left'}`}
+                            ></rect>
                         </svg>
                     </button>
                 </div>
@@ -34,7 +48,7 @@ const NavBar = () => {
                     <Link href="/timetable" className="text-2xl">TIMETABLE</Link>
                 </div>
             </div>
-            <div className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>
+            <div className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-auto'}`} onClick={toggleMenu}></div>
             <div className={`fixed top-0 left-0 w-3/4 max-w-xs h-full bg-white z-20 p-4 transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col space-y-4 text-black">
                     <Link href="/courseUnits" className="text-2xl" onClick={toggleMenu}>COURSE UNITS</Link>

@@ -21,7 +21,7 @@ module.exports = {
         'neon': '#EDFF00',
       },
       fontFamily: {
-        'sans': ['Inter','Helvetica', 'ui-sans-serif'],
+        'sans': ['Work Sans', 'Inter','Helvetica', 'ui-sans-serif'],
         'display': ['Anton', 'Helvetica', 'Inter', 'ui-sans-serif'],
       }
     },

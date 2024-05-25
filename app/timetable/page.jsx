@@ -39,8 +39,8 @@ const TimetablePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white">
-            <header className="mb-8 bg-white text-black">
+        <div className="min-h-screen">
+            <header className="mb-8 bg-white opacity-60 text-black">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Your Timetable</h1>
                     <nav className="mt-4">
@@ -49,7 +49,7 @@ const TimetablePage = () => {
                 </div>
             </header>
 
-            <main className="container mx-auto px-4">
+            <main className="container mx-auto px-4 text-white">
                 {daysOfWeek.map(day => (
                     <div key={day} className="mb-8">
                         <h2 className="text-3xl font-semibold mb-6">{day}</h2>
@@ -57,11 +57,11 @@ const TimetablePage = () => {
                             {getClassesByDayAndTime(day).length > 0 ? (
                                 getClassesByDayAndTime(day).map((classItem, index) => (
                                     <div key={index} className="bg-zinc-950 p-6 border border-zinc-600">
-                                        <h3 className="text-3xl font-semibold mb-2 uppercase">{classItem.title}</h3>
+                                        <h3 className="text-3xl font-semibold mb-2 uppercase text-white">{classItem.title}</h3>
                                         <hr></hr>
                                         <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-gray-400">Teacher: {classItem.teacher}</p>
-                                        <p className="text-lg mb-4">Type: {classItem.classType}</p>
-                                        <p className="text-lg mb-4">Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                        <p className="text-lg mb-4 text-white">Type: {classItem.classType}</p>
+                                        <p className="text-lg mb-4 text-white">Time: {classItem.classStart} - {classItem.classEnd}</p>
                                     </div>
                                 ))
                             ) : (

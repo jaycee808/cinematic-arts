@@ -11,7 +11,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="relative p-4 bg-black shadow">
+        <nav className="relative p-4 shadow">
             <div className="flex items-center justify-between">
                 <div id="logo"className="logo text-5xl lg:text-6xl text-white font-bold">
                     <Link href="/">CINEMATIC ARTS<span className="text-red-900">.</span></Link>

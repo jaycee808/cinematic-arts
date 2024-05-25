@@ -7,20 +7,15 @@ const HomePage = async () => {
     await connectDatabase();
 
     return (
-        <div className="min-h-fit bg-black text-white">
+        <div className="min-h-screen text-white">
             <div className="relative">
-                <img
-                    src="/assets/images/1.png" 
-                    alt="Banner Image"
-                    className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">
+                {/* <div className="absolute inset-0 bg-black opacity-50 flex items-center justify-center">
                     <h1 className="text-4xl font-bold text-white text-center">
                         The Cinematic Arts Institute
                     </h1>
-                </div>
+                </div> */}
             </div>
-            <div className="container mx-auto px-4 py-10">
+            <div className="container mx-auto px-4 py-20">
                 <header className="mb-4">
                     <h1 className="text-4xl font-bold tracking-tight">
                         Welcome

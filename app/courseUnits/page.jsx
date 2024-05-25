@@ -31,7 +31,7 @@ const CourseUnitsPage = () => {
 
     return (
         <div className="min-h-screen">
-            <header className="mb-8 bg-white text-black">
+            <header className="mb-8 bg-white opacity-60 text-black">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Course Units</h1>
                     <nav className="mt-4">
@@ -40,7 +40,7 @@ const CourseUnitsPage = () => {
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 bg-black text-white">
+            <main className="container mx-auto px-4 text-white">
                 <h2 className="text-3xl font-semibold mb-6">Mandatory Units</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
                     {mandatoryUnits.map(unit => (

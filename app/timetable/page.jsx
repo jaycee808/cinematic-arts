@@ -59,7 +59,7 @@ const TimetablePage = () => {
                             {getClassesByDayAndTime(day).length > 0 ? (
                                 getClassesByDayAndTime(day).map((classItem, index) => (
                                     <div key={index} className="bg-white p-6 border border-gray-300 shadow-lg">
-                                        <h3 className="text-3xl font-semibold mb-2 uppercase">{classItem.title}</h3>
+                                        <h3 className="text-2xl font-semibold mb-2 uppercase">{classItem.title}</h3>
                                         <hr className="mb-4"></hr>
                                         <p className="text-lg mb-4">Teacher: {classItem.teacher}</p>
                                         <p className="text-lg mb-4">Type: {classItem.classType}</p>

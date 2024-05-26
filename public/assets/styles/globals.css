@@ -18,6 +18,10 @@ hr {
     border-width: 2px;
 }
 
-* {
+h1, h2, h3, p, button, ul, li, .nav-link {
     font-family: 'Work Sans', sans-serif;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
 }

@@ -17,7 +17,7 @@ const SingleUnitPage = () => {
 
     return (
         <div className="min-h-screen">
-            <header className="mb-8 bg-white opacity-60 text-black">
+            <header className="mb-8 bg-black text-white">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">{unit.title}</h1>
                     <nav className="mt-4 flex space-x-4">
@@ -48,7 +48,7 @@ const SingleUnitPage = () => {
                         </section>
                     </div>
                     <div>
-                        <section className="mb-8 bg-gray-100 p-6 rounded-lg shadow">
+                        <section className="mb-8 bg-red-700 text-white p-6 rounded-lg shadow">
                             <h2 className="text-3xl font-semibold mb-6">Schedule</h2>
                             <ul className="list-none text-lg mb-4">
                                 {unit.schedule.map((scheduleItem, index) => (
@@ -60,7 +60,7 @@ const SingleUnitPage = () => {
                                 ))}
                             </ul>
                         </section>
-                        <section className="mb-8 bg-gray-100 p-6 rounded-lg shadow">
+                        <section className="mb-8 bg-black text-white p-6 rounded-lg shadow">
                             <h2 className="text-3xl font-semibold mb-6">Recommended Watching</h2>
                             <ul className="list-disc list-inside mb-4">
                                 {unit.recommendedWatching && unit.recommendedWatching.map((item, index) => (
@@ -68,7 +68,7 @@ const SingleUnitPage = () => {
                                 ))}
                             </ul>
                         </section>
-                        <section className="bg-gray-100 p-6 rounded-lg shadow">
+                        <section className="bg-red-700 text-white p-6 rounded-lg shadow">
                             <h2 className="text-3xl font-semibold mb-6">Recommended Reading</h2>
                             <p className="mb-4">{unit.recommendedReading}</p>
                         </section>

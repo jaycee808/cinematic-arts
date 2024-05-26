@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 const HomePage = () => {
     return (
-        <div className="min-h-screen bg-gray-100">
-            <header className="mb-8 bg-white text-black shadow-md">
+        <div className="min-h-screen">
+            <header className="mb-8 bg-black text-white shadow-md">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Welcome to The Cinematic Arts Institute</h1>
                     <nav className="mt-4">
                         <Link href="/courseUnits" className="nav-link hover:underline">
-                            <button className="bg-red-500 text-white px-4 py-2 rounded-md">Explore Course Units</button>
+                            <button className="bg-red-700 text-white px-4 py-2 rounded-md">Explore Course Units</button>
                         </Link>
                         <Link href="/timetable" className="nav-link hover:underline ml-4">
-                            <button className="bg-red-500 text-white px-4 py-2 rounded-md">View Timetable</button>
+                            <button className="bg-red-700 text-white px-4 py-2 rounded-md">View Timetable</button>
                         </Link>
                     </nav>
                 </div>

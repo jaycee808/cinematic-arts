@@ -64,6 +64,11 @@ const CourseUnitsPage = () => {
                                     </ul>
                                 </div>
                             </div>
+                            <Link href={`/courseUnits/${unit._id}`}>
+                                <button className="flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white bg-blue-600 hover:bg-blue-400">
+                                    <div className="font-bold text-center text-white">View Details</div>
+                                </button>
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -99,6 +104,11 @@ const CourseUnitsPage = () => {
                                 {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
                                 </div>
                             </button>
+                            <Link href={`/courseUnits/${unit._id}`}>
+                                <button className="flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white bg-blue-600 hover:bg-blue-400">
+                                    <div className="font-bold text-center text-white">View Details</div>
+                                </button>
+                            </Link>
                         </div>
                     ))}
                 </div>

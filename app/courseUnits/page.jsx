@@ -30,24 +30,26 @@ const CourseUnitsPage = () => {
     };
 
     return (
-        <div className="min-h-screen">
-            <header className="mb-8 bg-white opacity-60 text-black">
+        <div className="min-h-screen bg-gray-100">
+            <header className="mb-8 bg-white text-black shadow-md">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Course Units</h1>
                     <nav className="mt-4">
-                        <Link href="/timetable" className="nav-link text-slate-900 hover:underline">Go to Timetable</Link>
+                        <Link href="/timetable" className="nav-link hover:underline">
+                            <button className="bg-red-700 text-white px-4 py-2 rounded-md">Go to Timetable</button>
+                        </Link>
                     </nav>
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 text-white">
+            <main className="container mx-auto px-4 text-black">
                 <h2 className="text-3xl font-semibold mb-6">Mandatory Units</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
                     {mandatoryUnits.map(unit => (
-                        <div key={unit._id} className="bg-zinc-950 p-6 border border-zinc-600">
+                        <div key={unit._id} className="bg-white p-6 border border-gray-300 shadow-lg">
                             <h2 className="text-3xl uppercase font-semibold mb-2">{unit.title}</h2>
                             <hr/>
-                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-gray-400">{unit.teacher}</p>
+                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-black">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p className="mb-4">{unit.overview}</p>
@@ -65,7 +67,7 @@ const CourseUnitsPage = () => {
                                 </div>
                             </div>
                             <Link href={`/courseUnits/${unit._id}`}>
-                                <button className="flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white bg-blue-600 hover:bg-blue-400">
+                                <button className="flex justify-start text-lg py-2 px-4 mt-4 border-solid border-2 border-white bg-red-700 hover:bg-red-600 rounded-md">
                                     <div className="font-bold text-center text-white">View Details</div>
                                 </button>
                             </Link>
@@ -76,10 +78,10 @@ const CourseUnitsPage = () => {
                 <h2 className="text-3xl font-semibold mb-6">Optional Units</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {optionalUnits.map(unit => (
-                        <div key={unit._id} className="bg-zinc-950 p-6 border border-zinc-600">
+                        <div key={unit._id} className="bg-white p-6 border border-gray-300 shadow-lg">
                             <h2 className="text-3xl uppercase font-semibold mb-2">{unit.title}</h2>
-                            <hr className="border-white"/>
-                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-gray-400">{unit.teacher}</p>
+                            <hr/>
+                            <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-black">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p className="mb-4">{unit.overview}</p>
@@ -98,14 +100,14 @@ const CourseUnitsPage = () => {
                             </div>
                             <button
                                 onClick={() => handleSelectUnit(unit)}
-                                className={`flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-white text-black ' : 'bg-red-900 hover:bg-red-600'}`}
+                                className={`rounded-md flex justify-start text-lg py-2 px-4 mt-4 border-solid border-2 border-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-black text-white ' : 'bg-red-700 hover:bg-red-600'}`}
                             >   
-                                <div className="font-bold text-center">
+                                <div className="font-bold text-center text-white">
                                 {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
                                 </div>
                             </button>
                             <Link href={`/courseUnits/${unit._id}`}>
-                                <button className="flex justify-start uppercase text-lg py-2 px-4 mt-4 rounded-sm border-solid border-2 border-white bg-blue-600 hover:bg-blue-400">
+                                <button className="rounded-md flex justify-start text-lg py-2 px-4 mt-4 border-solid border-2 border-white bg-red-700 hover:bg-red-600">
                                     <div className="font-bold text-center text-white">View Details</div>
                                 </button>
                             </Link>

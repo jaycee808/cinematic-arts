@@ -39,29 +39,31 @@ const TimetablePage = () => {
     };
 
     return (
-        <div className="min-h-screen">
-            <header className="mb-8 bg-white opacity-60 text-black">
+        <div className="min-h-screen bg-gray-100">
+            <header className="mb-8 bg-white text-black shadow-md">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Your Timetable</h1>
                     <nav className="mt-4">
-                        <Link href="/courseUnits" className="nav-link text-slate-900 hover:underline">Back to Course Unit List</Link>
+                        <Link href="/courseUnits" className="nav-link text-black hover:underline">
+                            <button className="bg-red-500 text-white px-4 py-2 rounded-md">Back to Course Unit List</button>
+                        </Link>
                     </nav>
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 text-white">
+            <main className="container mx-auto px-4 text-black">
                 {daysOfWeek.map(day => (
                     <div key={day} className="mb-8">
                         <h2 className="text-3xl font-semibold mb-6">{day}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                             {getClassesByDayAndTime(day).length > 0 ? (
                                 getClassesByDayAndTime(day).map((classItem, index) => (
-                                    <div key={index} className="bg-zinc-950 p-6 border border-zinc-600">
-                                        <h3 className="text-3xl font-semibold mb-2 uppercase text-white">{classItem.title}</h3>
-                                        <hr></hr>
-                                        <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-gray-400">Teacher: {classItem.teacher}</p>
-                                        <p className="text-lg mb-4 text-white">Type: {classItem.classType}</p>
-                                        <p className="text-lg mb-4 text-white">Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                    <div key={index} className="bg-white p-6 border border-gray-300 shadow-lg">
+                                        <h3 className="text-3xl font-semibold mb-2 uppercase">{classItem.title}</h3>
+                                        <hr className="mb-4"></hr>
+                                        <p className="text-lg mb-4">Teacher: {classItem.teacher}</p>
+                                        <p className="text-lg mb-4">Type: {classItem.classType}</p>
+                                        <p className="text-lg mb-4">Time: {classItem.classStart} - {classItem.classEnd}</p>
                                     </div>
                                 ))
                             ) : (

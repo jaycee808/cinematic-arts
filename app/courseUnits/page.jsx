@@ -36,7 +36,7 @@ const CourseUnitsPage = () => {
                     <h1 className="text-4xl font-bold tracking-tight">Course Units</h1>
                     <nav className="mt-4">
                         <Link href="/timetable" className="nav-link hover:underline">
-                            <button className="bg-red-700 text-white px-4 py-2 rounded-md">Go to Timetable</button>
+                            <button className="bg-red-700 text-white px-4 py-2 border border-white">Go to Timetable</button>
                         </Link>
                     </nav>
                 </div>
@@ -68,8 +68,8 @@ const CourseUnitsPage = () => {
                             </div>
                             <div className="mt-4">
                                 <Link href={`/courseUnits/${unit._id}`}>
-                                    <button className="w-full rounded-md flex justify-center text-lg py-2 px-4 border-solid border-2 border-white bg-red-700 hover:bg-red-600">
-                                        <div className="font-bold text-center text-white">View Details</div>
+                                    <button className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200">
+                                        <div className="font-bold text-center">View Details</div>
                                     </button>
                                 </Link>
                             </div>
@@ -102,15 +102,15 @@ const CourseUnitsPage = () => {
                             </div>
                             <div className="mt-4">
                                 <Link href={`/courseUnits/${unit._id}`}>
-                                    <button className="w-full rounded-md flex justify-center text-lg py-2 px-4 border-solid border-2 border-white bg-red-700 hover:bg-red-600">
-                                        <div className="font-bold text-center text-white">View Details</div>
+                                    <button className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200">
+                                        <div className="font-bold text-center">View Details</div>
                                     </button>
                                 </Link>
                                 <button
                                     onClick={() => handleSelectUnit(unit)}
-                                    className={`w-full rounded-md flex justify-center text-lg py-2 px-4 border-solid border-2 border-white ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-black text-white ' : 'bg-red-700 hover:bg-red-600'}`}
+                                    className={`w-full flex justify-center text-lg mt-2 py-2 px-4 border border-black ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-black text-white' : 'bg-red-700 text-white hover:bg-red-600'}`}
                                 >   
-                                    <div className="font-bold text-center text-white">
+                                    <div className="font-bold text-center">
                                         {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
                                     </div>
                                 </button>

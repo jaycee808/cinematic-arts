@@ -44,7 +44,7 @@
         ]
     },
     {
-        "_id": "104",
+        "_id": "103",
         "year": "1",
         "title": "World Cinema",
         "teacher": "Professor Rajesh Kapoor",
@@ -66,7 +66,7 @@
         ]
     },
     {
-        "_id": "105",
+        "_id": "104",
         "year": "1",
         "title": "Screenwriting Fundamentals",
         "teacher": "Professor Michael Hughes",
@@ -88,7 +88,7 @@
         ]
     },
     {
-        "_id": "106",
+        "_id": "105",
         "year": "1",
         "title": "Visual Effects & Cinematography",
         "teacher": "Dr Jessica Wong",
@@ -110,7 +110,7 @@
         ]
     },
     {
-        "_id": "107",
+        "_id": "106",
         "year": "1",
         "title": "History of Television",
         "teacher": "Professor Anna Martinez",
@@ -132,7 +132,7 @@
         ]
     },
     {
-        "_id": "108",
+        "_id": "107",
         "year": "1",
         "title": "Sound Design for Film",
         "teacher": "Dr Daniel Collins",
@@ -150,6 +150,28 @@
                 "dayOfWeek": "Wednesday",
                 "classStart": "2pm",
                 "classEnd": "5pm"
+            }
+        ]
+    },
+    {
+        "_id": "108",
+        "year": "1",
+        "title": "Film History",
+        "teacher": "Dr Emma Taylor",
+        "overview": "Comprehensive survey of major film movements and historical developments in cinema.",
+        "description": "This module offers a detailed exploration of the evolution of film from its early days to contemporary movements. Students will study key historical developments, influential film movements, and major cinematic milestones. The course aims to provide an in-depth understanding of how cinema has evolved over time and the factors that have shaped its history.",
+        "aims": ["Understand the evolution of film from early cinema to contemporary movements.", "Identify and analyse major film movements and their impacts.", "Develop a comprehensive understanding of film history."],
+        "recommendedWatching": ["The Cabinet of Dr. Caligari", "Bicycle Thieves", "Blade Runner"],
+        "recommendedReading": "A Short History of Film by Wheeler Winston Dixon and Gwendolyn Audrey Foster",
+        "credits": "20",
+        "status": "Optional",
+        "schedule": [
+            {
+                "classType": "Lecture",
+                "timeOfDay": "Morning",
+                "dayOfWeek": "Monday",
+                "classStart": "11am",
+                "classEnd": "1pm"
             }
         ]
     }

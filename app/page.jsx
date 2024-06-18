@@ -20,10 +20,10 @@ const HomePage = () => {
                         <h1 className="text-5xl font-bold tracking-tight mb-4">Welcome to The Cinematic Arts Institute</h1>
                         <nav className="mt-4">
                             <Link href="/courseUnits" className="inline-block mx-2">
-                                <button className="bg-red-700 text-white px-6 py-3 rounded-md">Explore Course Units</button>
+                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-300">Explore Course Units</button>
                             </Link>
-                            <Link href="/timetable" className="inline-block mx-2">=
-                                <button className="bg-red-700 text-white px-6 py-3 rounded-md">View Timetable</button>
+                            <Link href="/timetable" className="inline-block mx-2">
+                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-300">View Timetable</button>
                             </Link>
                         </nav>
                     </header>
@@ -31,23 +31,35 @@ const HomePage = () => {
             </div>
 
             <main className="container mx-auto px-4 py-10 flex-1 text-black bg-white">
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section className="grid grid-cols-1 gap-8">
                     <div>
+                        <h2 className="text-3xl font-bold mb-4">Discover Your Passion for Cinema</h2>
                         <p className="mb-4 text-lg">
-                            At The Cinematic Arts Institute, we're passionate about nurturing the next generation of storytellers, filmmakers, and critical thinkers.
-                        </p>
-                        <p className="mb-4 text-lg">
-                            Our <strong>BA (Hons) Cinematic Arts</strong> programme offers a comprehensive exploration of the theory, history, and practice of cinema, preparing students for exciting careers in the dynamic world of film and television.
+                            At The Cinematic Arts Institute, we're passionate about nurturing the next generation of storytellers, filmmakers, and critical thinkers. Our <strong>BA (Hons) Cinematic Arts</strong> programme offers a comprehensive exploration of the theory, history, and practice of cinema, preparing students for exciting careers in the dynamic world of film and television.
                         </p>
                     </div>
-                    <div>
-                        <Image
-                            src="/assets/images/background/a3.png"
-                            alt="Film Reel"
-                            width={600}
-                            height={400}
-                            className="w-full h-auto object-cover rounded-md shadow-md"
-                        />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="p-6 bg-gray-100 shadow-lg">
+                            <h3 className="text-xl font-bold mb-2">Year One</h3>
+                            <h4 className="text-xl font-bold mb-2">Building Foundations</h4>
+                            <p className="text-lg">
+                                In your first year, you'll lay the groundwork for your cinematic journey. From the essential terminology of film studies to the practical skills of production, our expert faculty will guide you through every aspect of cinematic storytelling.
+                            </p>
+                        </div>
+                        <div className="p-6 bg-gray-100 shadow-lg">
+                            <h3 className="text-xl font-bold mb-2">Year Two</h3>
+                            <h4 className="text-xl font-bold mb-2">Deepening Your Understanding</h4>
+                            <p className="text-lg">
+                                Expand your horizons in your second year as you delve into the societal, cultural, and artistic dimensions of cinema. From exploring the works of renowned auteurs to mastering the art of directing and documentary filmmaking, you'll develop a nuanced understanding of the power of film to shape our world.
+                            </p>
+                        </div>
+                        <div className="p-6 bg-gray-100 shadow-lg">
+                            <h3 className="text-xl font-bold mb-2">Year Three</h3>
+                            <h4 className="text-xl font-bold mb-2">Specialising and Innovating</h4>
+                            <p className="text-lg">
+                                In your final year, you'll have the opportunity to specialise in areas that ignite your passion. Whether you're drawn to advanced film theory, experimental filmmaking, or the technical wizardry of animation and visual effects, you'll push the boundaries of cinematic expression under the guidance of our experienced faculty.
+                            </p>
+                        </div>
                     </div>
                 </section>
             </main>

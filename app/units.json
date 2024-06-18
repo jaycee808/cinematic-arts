@@ -16,8 +16,8 @@
                 "classType": "Lecture",
                 "timeOfDay": "Morning",
                 "dayOfWeek": "Monday",
-                "classStart": "9am",
-                "classEnd": "11am"
+                "classStart": "11am",
+                "classEnd": "1pm"
             }
         ]
     },
@@ -168,10 +168,10 @@
         "schedule": [
             {
                 "classType": "Lecture",
-                "timeOfDay": "Morning",
+                "timeOfDay": "Afternoon",
                 "dayOfWeek": "Monday",
-                "classStart": "11am",
-                "classEnd": "1pm"
+                "classStart": "2pm",
+                "classEnd": "4pm"
             }
         ]
     }

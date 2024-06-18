@@ -47,7 +47,7 @@ const CourseUnitsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">
                     {mandatoryUnits.map(unit => (
                         <div key={unit._id} className="bg-white p-6 border border-gray-300 shadow-lg">
-                            <h2 className="text-2xl uppercase font-semibold mb-2">{unit.title}</h2>
+                            <h2 className="text-4xl uppercase font-bold mb-2">{unit.title}</h2>
                             <hr/>
                             <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-black">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -81,7 +81,7 @@ const CourseUnitsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {optionalUnits.map(unit => (
                         <div key={unit._id} className="bg-white p-6 border border-gray-300 shadow-lg">
-                            <h2 className="text-2xl uppercase font-semibold mb-2">{unit.title}</h2>
+                            <h2 className="text-4xl uppercase font-bold mb-2">{unit.title}</h2>
                             <hr/>
                             <p className="text-lg uppercase mb-4 py-2 px-1 flex justify-end text-black">{unit.teacher}</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

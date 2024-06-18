@@ -18,24 +18,13 @@ const TimetablePage = () => {
     const allUnits = [...mandatoryUnits, ...selectedUnits];
 
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    const timeOfDayOrder = { 'Morning': 1, 'Afternoon': 2 };
+    const timeSlots = ['Morning', 'Afternoon'];
 
-    const getClassesByDayAndTime = (day) => {
-        const classesForDay = allUnits.flatMap(unit =>
-            unit.schedule.filter(scheduleItem => scheduleItem.dayOfWeek === day)
+    const getClassesByDayAndTime = (day, timeSlot) => {
+        return allUnits.flatMap(unit =>
+            unit.schedule.filter(scheduleItem => scheduleItem.dayOfWeek === day && scheduleItem.timeOfDay === timeSlot)
                 .map(scheduleItem => ({ ...scheduleItem, title: unit.title, teacher: unit.teacher }))
         );
-
-        classesForDay.sort((a, b) => {
-            if (timeOfDayOrder[a.timeOfDay] === timeOfDayOrder[b.timeOfDay]) {
-                const aStartHour = parseInt(a.classStart.replace('am', '').replace('pm', '')) + (a.classStart.includes('pm') ? 12 : 0);
-                const bStartHour = parseInt(b.classStart.replace('am', '').replace('pm', '')) + (b.classStart.includes('pm') ? 12 : 0);
-                return aStartHour - bStartHour;
-            }
-            return timeOfDayOrder[a.timeOfDay] - timeOfDayOrder[b.timeOfDay];
-        });
-
-        return classesForDay;
     };
 
     return (
@@ -51,25 +40,33 @@ const TimetablePage = () => {
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 text-black">
-                {daysOfWeek.map(day => (
-                    <div key={day} className="mb-8">
-                        <h2 className="text-3xl font-semibold mb-6">{day}</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                            {getClassesByDayAndTime(day).length > 0 ? (
-                                getClassesByDayAndTime(day).map((classItem, index) => (
-                                    <div key={index} className="bg-white p-6 border border-gray-300 shadow-lg">
-                                        <h3 className="text-2xl font-semibold mb-2 uppercase">{classItem.title}</h3>
-                                        <hr className="mb-4"></hr>
-                                        <p className="text-lg mb-4">Teacher: {classItem.teacher}</p>
-                                        <p className="text-lg mb-4">Type: {classItem.classType}</p>
-                                        <p className="text-lg mb-4">Time: {classItem.classStart} - {classItem.classEnd}</p>
-                                    </div>
-                                ))
-                            ) : (
-                                <p className="text-center text-gray-600">No classes scheduled.</p>
-                            )}
-                        </div>
+            <main className="container text-black">
+                <div className="grid grid-cols-6 gap-2">
+                    <div className="col-span-1"></div>
+                    {daysOfWeek.map(day => (
+                        <div key={day} className="dayOfWeek text-center font-bold uppercase text-2xl">{day}</div>
+                    ))}
+                </div>
+                {timeSlots.map(timeSlot => (
+                    <div key={timeSlot} className="grid grid-cols-6 gap-4 mt-4">
+                        <div className="timeSlots text-center font-semibold uppercase text-2xl">{timeSlot}</div>
+                        {daysOfWeek.map(day => (
+                            <div key={day} className="bg-white p-4 border border-gray-300 shadow-lg">
+                                {getClassesByDayAndTime(day, timeSlot).length > 0 ? (
+                                    getClassesByDayAndTime(day, timeSlot).map((classItem, index) => (
+                                        <div key={index} className="mb-4">
+                                            <h2 className="text-2xl font-bold uppercase">{classItem.title}</h2>
+                                            <p className="text-md">Teacher: {classItem.teacher}</p>
+                                            <p className="text-md">Type: {classItem.classType}</p>
+                                            <p className="text-md">Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                        </div>
+                                        
+                                    ))
+                                ) : (
+                                    <p className="text-center text-gray-600">No classes scheduled.</p>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 ))}
             </main>

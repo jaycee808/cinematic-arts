@@ -20,7 +20,7 @@ const HomePage = () => {
                         <h1 className="text-5xl font-bold tracking-tight mb-4">Welcome to The Cinematic Arts Institute</h1>
                         <nav className="mt-4">
                             <Link href="/courseUnits" className="inline-block mx-2">
-                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-300">Explore Course Units</button>
+                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-30 min-w-full">Explore Course Units</button>
                             </Link>
                             <Link href="/timetable" className="inline-block mx-2">
                                 <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-300">View Timetable</button>

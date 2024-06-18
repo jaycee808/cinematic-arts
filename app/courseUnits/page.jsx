@@ -34,11 +34,11 @@ const CourseUnitsPage = () => {
             <header className="mb-8 bg-black text-white shadow-md">
                 <div className="container mx-auto px-4 py-6">
                     <h1 className="text-4xl font-bold tracking-tight">Course Units</h1>
-                    <nav className="mt-4">
+                    <div className="mt-4">
                         <Link href="/timetable" className="nav-link hover:underline">
-                            <button className="bg-red-700 text-white px-4 py-2 border border-white">Go to Timetable</button>
+                            <button className="bg-red-700 text-white px-4 py-2">Go to Timetable</button>
                         </Link>
-                    </nav>
+                    </div>
                 </div>
             </header>
 

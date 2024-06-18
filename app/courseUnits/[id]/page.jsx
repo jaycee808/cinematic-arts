@@ -17,13 +17,11 @@ const SingleUnitPage = () => {
 
     return (
         <div className="min-h-screen">
-            <header className="mb-8 bg-black text-white">
+            <header className="navigation-bars mb-8 bg-slate-950 text-slate-50">
                 <div className="container mx-auto px-4 py-6">
-                    <h1 className="text-4xl font-bold tracking-tight">{unit.title}</h1>
+                    <h1 className="text-4xl font-bold">{unit.title}</h1>
                     <nav className="mt-4 flex space-x-4">
-                        <Link href="/" className="text-lg font-semibold">Go Home</Link>
-                        <Link href="/courseUnits" className="text-lg font-semibold">Back to Course Unit List</Link>
-                        <Link href="/timetable" className="text-lg font-semibold">Timetable</Link>
+                        <Link href="/courseUnits" className="text-lg font-semibold bg-red-700 text-white px-4 py-2 tracking-tight">Back to Course Units</Link>
                     </nav>
                 </div>
             </header>
@@ -48,7 +46,7 @@ const SingleUnitPage = () => {
                         </section>
                     </div>
                     <div>
-                        <section className="mb-8 bg-red-700 text-white p-6 rounded-lg shadow">
+                        <section className="mb-8 bg-red-700 text-slate-50 p-6 shadow">
                             <h2 className="text-3xl font-semibold mb-6">Schedule</h2>
                             <ul className="list-none text-lg mb-4">
                                 {unit.schedule.map((scheduleItem, index) => (
@@ -60,7 +58,7 @@ const SingleUnitPage = () => {
                                 ))}
                             </ul>
                         </section>
-                        <section className="mb-8 bg-black text-white p-6 rounded-lg shadow">
+                        <section className="mb-8 bg-slate-950 text-slate-50 p-6 shadow">
                             <h2 className="text-3xl font-semibold mb-6">Recommended Watching</h2>
                             <ul className="list-disc list-inside mb-4">
                                 {unit.recommendedWatching && unit.recommendedWatching.map((item, index) => (
@@ -68,7 +66,7 @@ const SingleUnitPage = () => {
                                 ))}
                             </ul>
                         </section>
-                        <section className="bg-red-700 text-white p-6 rounded-lg shadow">
+                        <section className="bg-red-700 text-slate-50 p-6 shadow">
                             <h2 className="text-3xl font-semibold mb-6">Recommended Reading</h2>
                             <p className="mb-4">{unit.recommendedReading}</p>
                         </section>

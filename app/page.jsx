@@ -15,22 +15,23 @@ const HomePage = () => {
                     objectFit="cover"
                     className="absolute inset-0"
                 />
-                <div className="relative z-10 bg-black bg-opacity-50 text-white h-full flex flex-col justify-center">
+                <div className="relative z-10 bg-slate-950 bg-opacity-50 text-slate-50 h-full flex flex-col justify-center">
                     <header className="container mx-auto px-4 py-6 text-center">
-                        <h1 className="text-5xl font-bold tracking-tight mb-4">Welcome to The Cinematic Arts Institute</h1>
+                        <div className="hero-text-one text-3xl md:text-4xl lg:text-6xl font-bold mb-4 uppercase tracking-tight">Welcome to</div>
+                        <div className="hero-text-two text-5xl md:text-6xl lg:text-8xl font-bold mb-4 uppercase tracking-tight">The Cinematic Arts Institute</div>
                         <nav className="mt-4">
                             <Link href="/courseUnits" className="inline-block mx-2">
-                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-30 min-w-full">Explore Course Units</button>
+                                <button className="bg-red-700 hover:bg-red-600 tex-slate-50 px-6 py-3 transition duration-30">Explore Course Units</button>
                             </Link>
                             <Link href="/timetable" className="inline-block mx-2">
-                                <button className="bg-red-700 hover:bg-red-600 text-white px-6 py-3 transition duration-300">View Timetable</button>
+                                <button className="bg-red-700 hover:bg-red-600 text-slate-50 px-6 py-3 transition duration-300 mt-2">View Your Timetable</button>
                             </Link>
                         </nav>
                     </header>
                 </div>
             </div>
 
-            <main className="container mx-auto px-4 py-10 flex-1 text-black bg-white">
+            <main className="container mx-auto px-4 py-10 flex-1 text-slate-950 bg-slate-50">
                 <section className="grid grid-cols-1 gap-8">
                     <div>
                         <h2 className="text-3xl font-bold mb-4">Discover Your Passion for Cinema</h2>

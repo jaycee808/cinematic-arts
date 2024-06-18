@@ -11,9 +11,9 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="relative p-4 shadow bg-white text-black">
+        <nav className="relative p-2 shadow bg-slate-50 text-black">
             <div className="flex items-center justify-between">
-                <div id="logo" className="logo text-6xl lg:text-8xl font-bold">
+                <div id="logo" className="logo text-5xl lg:text-8xl font-bold">
                     <Link href="/">CINEMATIC ARTS<span className="text-red-700">.</span></Link>
                 </div>
                 <div className="md:hidden">
@@ -22,7 +22,7 @@ const NavBar = () => {
                             viewBox="0 0 100 80"
                             width="40"
                             height="20"
-                            className="fill-current text-black">
+                            className="fill-current text-slate-950">
                             <rect width="100" height="10"></rect>
                             <rect y="30" width="75" height="10"></rect>
                             <rect y="60" width="50" height="10"></rect>
@@ -34,12 +34,13 @@ const NavBar = () => {
                     <Link href="/timetable" className="nav-link text-2xl font-bold">Timetable</Link>
                 </div>
             </div>
-            <div className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>
-            <div className={`fixed top-0 left-0 w-3/4 max-w-xs h-full bg-black text-white z-20 p-4 transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className={`fixed inset-0 bg-slate-950 bg-opacity-50 z-10 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={toggleMenu}></div>
+            <div className={`fixed top-0 left-0 w-4/5 max-w-xs h-full bg-slate-950 text-slate-50 z-20 p-4 transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex flex-col space-y-4">
-                    <div className="logo text-6xl font-bold" onClick={toggleMenu}>
+                    <div className="logo text-5xl font-bold" onClick={toggleMenu}>
                         <Link href="/">CINEMATIC ARTS<span className="text-red-700">.</span></Link>
                     </div>
+                    <hr></hr>
                     <Link href="/courseUnits" className="nav-link text-2xl font-bold" onClick={toggleMenu}>Course Units</Link>
                     <Link href="/timetable" className="nav-link text-2xl font-bold" onClick={toggleMenu}>Timetable</Link>
                 </div>

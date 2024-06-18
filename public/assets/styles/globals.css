@@ -12,10 +12,14 @@ h3, h4, p, button, ul, li, .nav-link {
     font-family: 'Inter', sans-serif;
 }
 
-.logo, h1, h2 {
-    font-family: 'Antonio', sans-serif;
+.logo {
+    font-family: 'Anton', sans-serif;
 }
 
 .dayOfWeek, .timeSlots {
     font-family: 'Inter Tight', sans-serif;
+}
+
+h1, h2, .hero-text-one, .hero-text-two {
+    font-family: 'Antonio', sans-serif;
 }

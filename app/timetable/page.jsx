@@ -18,11 +18,10 @@ const TimetablePage = () => {
     const allUnits = [...mandatoryUnits, ...selectedUnits];
 
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    const timeSlots = ['Morning', 'Afternoon'];
 
-    const getClassesByDayAndTime = (day, timeSlot) => {
+    const getClassesByDay = (day) => {
         return allUnits.flatMap(unit =>
-            unit.schedule.filter(scheduleItem => scheduleItem.dayOfWeek === day && scheduleItem.timeOfDay === timeSlot)
+            unit.schedule.filter(scheduleItem => scheduleItem.dayOfWeek === day)
                 .map(scheduleItem => ({ ...scheduleItem, title: unit.title, teacher: unit.teacher }))
         );
     };
@@ -40,27 +39,24 @@ const TimetablePage = () => {
                 </div>
             </header>
 
-            <main className="container text-black">
-                <div className="grid grid-cols-6 gap-2">
-                    <div className="col-span-1"></div>
-                    {daysOfWeek.map(day => (
-                        <div key={day} className="dayOfWeek text-center font-bold uppercase text-2xl">{day}</div>
-                    ))}
-                </div>
-                {timeSlots.map(timeSlot => (
-                    <div key={timeSlot} className="grid grid-cols-6 gap-4 mt-4">
-                        <div className="timeSlots text-center font-semibold uppercase text-2xl">{timeSlot}</div>
+            <main className="container mx-auto text-black overflow-x-auto">
+                <div className="min-w-max">
+                    <div className="grid grid-cols-5 gap-2">
+                        {daysOfWeek.map(day => (
+                            <div key={day} className="dayOfWeek text-center font-bold uppercase text-2xl">{day}</div>
+                        ))}
+                    </div>
+                    <div className="grid grid-cols-5 gap-4 mt-4">
                         {daysOfWeek.map(day => (
                             <div key={day} className="bg-white p-4 border border-gray-300 shadow-lg">
-                                {getClassesByDayAndTime(day, timeSlot).length > 0 ? (
-                                    getClassesByDayAndTime(day, timeSlot).map((classItem, index) => (
+                                {getClassesByDay(day).length > 0 ? (
+                                    getClassesByDay(day).map((classItem, index) => (
                                         <div key={index} className="mb-4">
                                             <h2 className="text-2xl font-bold uppercase">{classItem.title}</h2>
                                             <p className="text-md">Teacher: {classItem.teacher}</p>
                                             <p className="text-md">Type: {classItem.classType}</p>
                                             <p className="text-md">Time: {classItem.classStart} - {classItem.classEnd}</p>
                                         </div>
-                                        
                                     ))
                                 ) : (
                                     <p className="text-center text-gray-600">No classes scheduled.</p>
@@ -68,7 +64,7 @@ const TimetablePage = () => {
                             </div>
                         ))}
                     </div>
-                ))}
+                </div>
             </main>
         </div>
     );

@@ -2,19 +2,31 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import units from '../units.json';
 
 const TimetablePage = () => {
+    const [courseUnits, setCourseUnits] = useState([]);
     const [selectedUnits, setSelectedUnits] = useState([]);
 
-    const mandatoryUnits = units.filter(unit => unit.status === "Mandatory");
-
     useEffect(() => {
+        // Fetch course units from the MongoDB Database
+        const fetchCourseUnits = async () => {
+            try {
+                const response = await fetch('/api/units');
+                const data = await response.json();
+                setCourseUnits(data);
+            } catch (error) {
+                console.error('Failed to fetch course units:', error);
+            }
+        };
+
+        fetchCourseUnits();
+
         // Load selected units from localStorage
         const savedUnits = JSON.parse(localStorage.getItem('selectedUnits')) || [];
         setSelectedUnits(savedUnits);
     }, []);
 
+    const mandatoryUnits = courseUnits.filter(unit => unit.status === "Mandatory");
     const allUnits = [...mandatoryUnits, ...selectedUnits];
 
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];

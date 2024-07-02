@@ -11,11 +11,14 @@ const connectDatabase = async () => {
     }
 
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect(process.env.MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
         databaseConnected = true;
         console.log('Connected and ready to go!');
     } catch (error) {
-        console.log('Holy smokes batman! The database is not connected!');
+        console.log('Holy smokes batman! The database is not connected!', error);
     }
 };
 

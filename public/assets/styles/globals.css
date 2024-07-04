@@ -8,7 +8,7 @@ hr {
     border-width: 2px;
 }
 
-h3, h4, p, button, ul, li, .nav-link {
+h3, h4, p, button, ul, li {
     font-family: 'Inter', sans-serif;
 }
 
@@ -20,6 +20,6 @@ h3, h4, p, button, ul, li, .nav-link {
     font-family: 'Inter Tight', sans-serif;
 }
 
-h1, h2, .hero-text-one, .hero-text-two {
+h1, h2, .hero-text-one, .hero-text-two, .nav-link {
     font-family: 'Antonio', sans-serif;
 }

@@ -3,11 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import connectDatabase from '@/config/database'
 
-const HomePage = async () => {
-
-    await connectDatabase();
+const HomePage = () => {
 
     return (
         <div className="min-h-screen flex flex-col">

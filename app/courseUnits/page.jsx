@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -6,6 +6,7 @@ import Link from 'next/link';
 const CourseUnitsPage = () => {
     const [courseUnits, setCourseUnits] = useState([]);
     const [selectedUnits, setSelectedUnits] = useState([]);
+    const [expandedUnits, setExpandedUnits] = useState([]);
 
     useEffect(() => {
         // Fetch course units from the MongoDB Database
@@ -37,6 +38,14 @@ const CourseUnitsPage = () => {
         }
         setSelectedUnits(updatedUnits);
         localStorage.setItem('selectedUnits', JSON.stringify(updatedUnits));
+    };
+
+    const handleExpandUnit = (unitId) => {
+        if (expandedUnits.includes(unitId)) {
+            setExpandedUnits(expandedUnits.filter(id => id !== unitId));
+        } else {
+            setExpandedUnits([...expandedUnits, unitId]);
+        }
     };
 
     const mandatoryUnits = courseUnits.filter(unit => unit.status === "Mandatory");
@@ -80,11 +89,33 @@ const CourseUnitsPage = () => {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <Link href={`/courseUnits/${unit._id}`}>
-                                    <button className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200">
-                                        <div className="font-bold text-center">View Details</div>
-                                    </button>
-                                </Link>
+                                <button
+                                    onClick={() => handleExpandUnit(unit._id)}
+                                    className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200"
+                                >
+                                    <div className="font-bold text-center">View More Details</div>
+                                </button>
+                                {expandedUnits.includes(unit._id) && (
+                                    <div className="mt-4">
+                                        <p>{unit.description}</p>
+                                        <h4 className="text-xl font-semibold mt-2">Aims:</h4>
+                                        <ul className="list-disc list-inside">
+                                            {unit.aims.map((aim, index) => (
+                                                <li key={index}>{aim}</li>
+                                            ))}
+                                        </ul>
+                                        <h4 className="text-xl font-semibold mt-2">Recommended Watching:</h4>
+                                        <ul className="list-disc list-inside">
+                                            {unit.recommendedWatching.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                        <h4 className="text-xl font-semibold mt-2">Recommended Reading:</h4>
+                                        <p>{unit.recommendedReading}</p>
+                                        <h4 className="text-xl font-semibold mt-2">Credits:</h4>
+                                        <p>{unit.credits}</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -114,11 +145,33 @@ const CourseUnitsPage = () => {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <Link href={`/courseUnits/${unit._id}`}>
-                                    <button className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200">
-                                        <div className="font-bold text-center">View Details</div>
-                                    </button>
-                                </Link>
+                                <button
+                                    onClick={() => handleExpandUnit(unit._id)}
+                                    className="w-full flex justify-center text-lg py-2 px-4 border border-black bg-white text-black hover:bg-gray-200"
+                                >
+                                    <div className="font-bold text-center">View More Details</div>
+                                </button>
+                                {expandedUnits.includes(unit._id) && (
+                                    <div className="mt-4">
+                                        <p>{unit.description}</p>
+                                        <h4 className="text-xl font-semibold mt-2">Aims:</h4>
+                                        <ul className="list-disc list-inside">
+                                            {unit.aims.map((aim, index) => (
+                                                <li key={index}>{aim}</li>
+                                            ))}
+                                        </ul>
+                                        <h4 className="text-xl font-semibold mt-2">Recommended Watching:</h4>
+                                        <ul className="list-disc list-inside">
+                                            {unit.recommendedWatching.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                        <h4 className="text-xl font-semibold mt-2">Recommended Reading:</h4>
+                                        <p>{unit.recommendedReading}</p>
+                                        <h4 className="text-xl font-semibold mt-2">Credits:</h4>
+                                        <p>{unit.credits}</p>
+                                    </div>
+                                )}
                                 <button
                                     onClick={() => handleSelectUnit(unit)}
                                     className={`w-full flex justify-center text-lg mt-2 py-2 px-4 border border-black ${selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'bg-black text-white' : 'bg-red-700 text-white hover:bg-red-600'}`}

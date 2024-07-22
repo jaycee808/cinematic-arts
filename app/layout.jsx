@@ -10,7 +10,7 @@ export const metadata = {
 const PrimaryLayout = ({ children }) => {
     return (
         <html lang="en">
-            <body>
+            <body className="flex p-12">
                 <div>
                     <NavBar />
                     <div>{children}</div>

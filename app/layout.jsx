@@ -10,8 +10,8 @@ export const metadata = {
 const PrimaryLayout = ({ children }) => {
     return (
         <html lang="en">
-            <body className="relative min-h-screen">
-                <div className="relative z-10">
+            <body>
+                <div>
                     <NavBar />
                     <div>{children}</div>
                     <Footer />

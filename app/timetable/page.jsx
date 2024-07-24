@@ -14,20 +14,27 @@ const TimetablePage = () => {
                 const response = await fetch('/api/units');
                 const data = await response.json();
                 setCourseUnits(data);
+
+                // Load selected units from localStorage
+                const savedUnits = JSON.parse(localStorage.getItem('selectedUnits')) || [];
+                setSelectedUnits(savedUnits);
             } catch (error) {
                 console.error('Failed to fetch course units:', error);
             }
         };
 
         fetchCourseUnits();
-
-        // Load selected units from localStorage
-        const savedUnits = JSON.parse(localStorage.getItem('selectedUnits')) || [];
-        setSelectedUnits(savedUnits);
     }, []);
 
     const mandatoryUnits = courseUnits.filter(unit => unit.status === "Mandatory");
-    const allUnits = [...mandatoryUnits, ...selectedUnits];
+
+    // Combine mandatory and selected units and remove duplicates
+    const allUnits = [
+        ...mandatoryUnits,
+        ...selectedUnits.filter(
+            unit => !mandatoryUnits.some(mandatoryUnit => mandatoryUnit._id === unit._id)
+        ),
+    ];
 
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
@@ -53,29 +60,23 @@ const TimetablePage = () => {
 
             <main>
                 <div>
-                    <div>
-                        {daysOfWeek.map(day => (
-                            <div key={day}>{day}</div>
-                        ))}
-                    </div>
-                    <div>
-                        {daysOfWeek.map(day => (
-                            <div key={day}>
-                                {getClassesByDay(day).length > 0 ? (
-                                    getClassesByDay(day).map((classItem, index) => (
-                                        <div key={index}>
-                                            <h2>{classItem.title}</h2>
-                                            <p>Teacher: {classItem.teacher}</p>
-                                            <p>Type: {classItem.classType}</p>
-                                            <p>Time: {classItem.classStart} - {classItem.classEnd}</p>
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p>No classes scheduled.</p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
+                    {daysOfWeek.map(day => (
+                        <div key={day}>
+                            <h2>{day}</h2>
+                            {getClassesByDay(day).length > 0 ? (
+                                getClassesByDay(day).map((classItem, index) => (
+                                    <div key={index}>
+                                        <h3>{classItem.title}</h3>
+                                        <p>Teacher: {classItem.teacher}</p>
+                                        <p>Type: {classItem.classType}</p>
+                                        <p>Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p>No classes scheduled.</p>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </main>
         </div>

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -7,6 +7,8 @@ const CourseUnitsPage = () => {
     const [courseUnits, setCourseUnits] = useState([]);
     const [selectedUnits, setSelectedUnits] = useState([]);
     const [expandedUnits, setExpandedUnits] = useState([]);
+    const MAX_CREDITS = 120;
+    const UNIT_CREDITS = 20;
 
     useEffect(() => {
         // Fetch course units from the MongoDB Database
@@ -15,6 +17,9 @@ const CourseUnitsPage = () => {
                 const response = await fetch('/api/units');
                 const data = await response.json();
                 setCourseUnits(data);
+                const mandatoryUnits = data.filter(unit => unit.status === "Mandatory");
+                setSelectedUnits(mandatoryUnits);
+                localStorage.setItem('selectedUnits', JSON.stringify(mandatoryUnits));
             } catch (error) {
                 console.error('Failed to fetch course units:', error);
             }
@@ -33,6 +38,11 @@ const CourseUnitsPage = () => {
             // Deselect the unit if already selected
             updatedUnits = updatedUnits.filter(selectedUnit => selectedUnit._id !== unit._id);
         } else {
+            // Check if adding the unit exceeds the maximum allowed credits
+            if ((updatedUnits.length * UNIT_CREDITS) + UNIT_CREDITS > MAX_CREDITS) {
+                alert('You cannot select more than 120 credits.');
+                return;
+            }
             // Select the unit if not already selected
             updatedUnits.push(unit);
         }
@@ -51,6 +61,9 @@ const CourseUnitsPage = () => {
     const mandatoryUnits = courseUnits.filter(unit => unit.status === "Mandatory");
     const optionalUnits = courseUnits.filter(unit => unit.status === "Optional");
 
+    const selectedCredits = selectedUnits.length * UNIT_CREDITS;
+    const creditsLeft = MAX_CREDITS - selectedCredits;
+
     return (
         <div>
             <header>
@@ -65,6 +78,12 @@ const CourseUnitsPage = () => {
             </header>
 
             <main>
+                <div>
+                    <h3>Total Credits: {MAX_CREDITS}</h3>
+                    <h3>Credits Chosen: {selectedCredits}</h3>
+                    <h3>Credits Left: {creditsLeft}</h3>
+                </div>
+
                 <h2>Mandatory Units</h2>
                 <div>
                     {mandatoryUnits.map(unit => (
@@ -89,8 +108,7 @@ const CourseUnitsPage = () => {
                                 </div>
                             </div>
                             <div>
-                                <button
-                                    onClick={() => handleExpandUnit(unit._id)}>
+                                <button onClick={() => handleExpandUnit(unit._id)}>
                                     <div>View More Details</div>
                                 </button>
                                 {expandedUnits.includes(unit._id) && (
@@ -143,8 +161,7 @@ const CourseUnitsPage = () => {
                                 </div>
                             </div>
                             <div>
-                                <button
-                                    onClick={() => handleExpandUnit(unit._id)}>
+                                <button onClick={() => handleExpandUnit(unit._id)}>
                                     <div>View More Details</div>
                                 </button>
                                 {expandedUnits.includes(unit._id) && (

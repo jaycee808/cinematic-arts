@@ -8,32 +8,19 @@ const HomePage = () => {
 
     return (
         <div>
-            <div>
-                {/* <Image
-                    src="/assets/images/background/b2.png"
-                    alt="Banner Image"
-                    layout="fill"
-                    objectFit="cover"
-                    className="absolute inset-0"
-                /> */}
-                <div>
-                    <header>
-                        <div>Welcome to</div>
-                        <div>The Cinematic Arts Institute</div>
-                        <nav>
-                            <Link href="/courseUnits">
-                                <button>Explore Course Units</button>
-                            </Link>
-                            <Link href="/timetable">
-                                <button>View Your Timetable</button>
-                            </Link>
-                        </nav>
-                    </header>
-                </div>
-            </div>
+            <header>
+                <div>Welcome</div>
+                <div>The Cinematic Arts Institute</div>
+            </header>
 
             <main>
                 <section>
+                    <Image
+                    src="/assets/images/background/b2.png"
+                    alt="Banner Image"
+                    width="600"
+                    height="100"
+                    />
                     <div>
                         <h2>Discover Your Passion for Cinema</h2>
                         <p>

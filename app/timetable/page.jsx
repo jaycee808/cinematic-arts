@@ -3,6 +3,22 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
+
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+
 const TimetablePage = () => {
     const [courseUnits, setCourseUnits] = useState([]);
     const [selectedUnits, setSelectedUnits] = useState([]);
@@ -52,7 +68,7 @@ const TimetablePage = () => {
                     <h1>Your Timetable</h1>
                     <nav>
                         <Link href="/courseUnits">
-                            <button>Back to Course Unit List</button>
+                            <Button>Back to Course Unit List</Button>
                         </Link>
                     </nav>
                 </div>
@@ -61,21 +77,31 @@ const TimetablePage = () => {
             <main>
                 <div>
                     {daysOfWeek.map(day => (
-                        <div key={day}>
-                            <h2>{day}</h2>
-                            {getClassesByDay(day).length > 0 ? (
-                                getClassesByDay(day).map((classItem, index) => (
-                                    <div key={index}>
-                                        <h3>{classItem.title}</h3>
-                                        <p>Teacher: {classItem.teacher}</p>
-                                        <p>Type: {classItem.classType}</p>
-                                        <p>Time: {classItem.classStart} - {classItem.classEnd}</p>
-                                    </div>
-                                ))
-                            ) : (
-                                <p>No classes scheduled.</p>
-                            )}
-                        </div>
+                        <Card key={day}>
+                            <CardHeader>
+                                <CardTitle>{day}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                {getClassesByDay(day).length > 0 ? (
+                                    getClassesByDay(day).map((classItem, index) => (
+                                        <Accordion type="single" collapsible key={index}>
+                                            <AccordionItem value={`item-${index}`}>
+                                                <AccordionTrigger>
+                                                    <h3>{classItem.title}</h3>
+                                                </AccordionTrigger>
+                                                <AccordionContent>
+                                                    <p>Teacher: {classItem.teacher}</p>
+                                                    <p>Type: {classItem.classType}</p>
+                                                    <p>Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </Accordion>
+                                    ))
+                                ) : (
+                                    <p>No classes scheduled.</p>
+                                )}
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </main>

@@ -3,6 +3,22 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
+
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+
 const CourseUnitsPage = () => {
     const [courseUnits, setCourseUnits] = useState([]);
     const [selectedUnits, setSelectedUnits] = useState([]);
@@ -71,7 +87,7 @@ const CourseUnitsPage = () => {
                     <h1>Course Units</h1>
                     <div>
                         <Link href="/timetable">
-                            <button>Go to Timetable</button>
+                            <Button>Go to Timetable</Button>
                         </Link>
                     </div>
                 </div>
@@ -87,111 +103,99 @@ const CourseUnitsPage = () => {
                 <h2>Mandatory Units</h2>
                 <div>
                     {mandatoryUnits.map(unit => (
-                        <div key={unit._id}>
-                            <h2>{unit.title}</h2>
-                            <hr />
-                            <p>{unit.teacher}</p>
-                            <div>
-                                <div>
-                                    <p>{unit.overview}</p>
-                                </div>
-                                <div>
-                                    <ul>
-                                        {unit.schedule.map((scheduleItem, index) => (
-                                            <li key={index}>
-                                                {scheduleItem.classType}
-                                                <br />
-                                                {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <button onClick={() => handleExpandUnit(unit._id)}>
-                                    <div>View More Details</div>
-                                </button>
-                                {expandedUnits.includes(unit._id) && (
-                                    <div>
-                                        <p>{unit.description}</p>
-                                        <h4>Aims:</h4>
-                                        <ul>
-                                            {unit.aims.map((aim, index) => (
-                                                <li key={index}>{aim}</li>
-                                            ))}
-                                        </ul>
-                                        <h4>Recommended Watching:</h4>
-                                        <ul>
-                                            {unit.recommendedWatching.map((item, index) => (
-                                                <li key={index}>{item}</li>
-                                            ))}
-                                        </ul>
-                                        <h4>Recommended Reading:</h4>
-                                        <p>{unit.recommendedReading}</p>
-                                        <h4>Credits:</h4>
-                                        <p>{unit.credits}</p>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
+                        <Card key={unit._id}>
+                            <CardHeader>
+                                <CardTitle>{unit.title}</CardTitle>
+                                <p>{unit.teacher}</p>
+                            </CardHeader>
+                            <CardContent>
+                                <p>{unit.overview}</p>
+                                <ul>
+                                    {unit.schedule.map((scheduleItem, index) => (
+                                        <li key={index}>
+                                            {scheduleItem.classType}
+                                            <br />
+                                            {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Accordion type="single" collapsible>
+                                    <AccordionItem value={unit._id}>
+                                        <AccordionTrigger>View More Details</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p>{unit.description}</p>
+                                            <h4>Aims:</h4>
+                                            <ul>
+                                                {unit.aims.map((aim, index) => (
+                                                    <li key={index}>{aim}</li>
+                                                ))}
+                                            </ul>
+                                            <h4>Recommended Watching:</h4>
+                                            <ul>
+                                                {unit.recommendedWatching.map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
+                                            </ul>
+                                            <h4>Recommended Reading:</h4>
+                                            <p>{unit.recommendedReading}</p>
+                                            <h4>Credits:</h4>
+                                            <p>{unit.credits}</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
 
                 <h2>Optional Units</h2>
                 <div>
                     {optionalUnits.map(unit => (
-                        <div key={unit._id}>
-                            <h2>{unit.title}</h2>
-                            <hr />
-                            <p>{unit.teacher}</p>
-                            <div>
-                                <div>
-                                    <p>{unit.overview}</p>
-                                </div>
-                                <div>
-                                    <ul>
-                                        {unit.schedule.map((scheduleItem, index) => (
-                                            <li key={index}>
-                                                {scheduleItem.classType}
-                                                <br />
-                                                {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <button onClick={() => handleExpandUnit(unit._id)}>
-                                    <div>View More Details</div>
-                                </button>
-                                {expandedUnits.includes(unit._id) && (
-                                    <div>
-                                        <p>{unit.description}</p>
-                                        <h4>Aims:</h4>
-                                        <ul>
-                                            {unit.aims.map((aim, index) => (
-                                                <li key={index}>{aim}</li>
-                                            ))}
-                                        </ul>
-                                        <h4>Recommended Watching:</h4>
-                                        <ul>
-                                            {unit.recommendedWatching.map((item, index) => (
-                                                <li key={index}>{item}</li>
-                                            ))}
-                                        </ul>
-                                        <h4>Recommended Reading:</h4>
-                                        <p>{unit.recommendedReading}</p>
-                                        <h4>Credits:</h4>
-                                        <p>{unit.credits}</p>
-                                    </div>
-                                )}
-                                <button onClick={() => handleSelectUnit(unit)}>
-                                    <div>
-                                        {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
+                        <Card key={unit._id}>
+                            <CardHeader>
+                                <CardTitle>{unit.title}</CardTitle>
+                                <p>{unit.teacher}</p>
+                            </CardHeader>
+                            <CardContent>
+                                <p>{unit.overview}</p>
+                                <ul>
+                                    {unit.schedule.map((scheduleItem, index) => (
+                                        <li key={index}>
+                                            {scheduleItem.classType}
+                                            <br />
+                                            {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Accordion type="single" collapsible>
+                                    <AccordionItem value={unit._id}>
+                                        <AccordionTrigger>View More Details</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p>{unit.description}</p>
+                                            <h4>Aims:</h4>
+                                            <ul>
+                                                {unit.aims.map((aim, index) => (
+                                                    <li key={index}>{aim}</li>
+                                                ))}
+                                            </ul>
+                                            <h4>Recommended Watching:</h4>
+                                            <ul>
+                                                {unit.recommendedWatching.map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
+                                            </ul>
+                                            <h4>Recommended Reading:</h4>
+                                            <p>{unit.recommendedReading}</p>
+                                            <h4>Credits:</h4>
+                                            <p>{unit.credits}</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+                                <Button variant="outline" onClick={() => handleSelectUnit(unit)}>
+                                    {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
+                                </Button>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
 

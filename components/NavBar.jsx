@@ -17,7 +17,7 @@ const NavBar = () => {
                     <Link href="/">CINEMATIC ARTS</Link>
                 </div>
                 <div className="flex justify-end items-center space-x-8">
-                    <div className="relative">
+                    <div className="relative z-50">
                         <button
                             onClick={toggleAboutDropdown}
                             className="hover:text-gray-400"
@@ -27,14 +27,14 @@ const NavBar = () => {
                         {aboutDropdown && (
                             <div className="absolute bg-white text-black mt-2 rounded shadow-lg">
                                 <Link href="/about/institute" className="block px-4 py-2 hover:bg-gray-200">
-                                    About the Institute
+                                    Institute
                                 </Link>
                                 <div className="relative">
                                     <button
                                         onClick={toggleProgrammeDropdown}
                                         className="block w-full text-left px-4 py-2 hover:bg-gray-200"
                                     >
-                                        About the Programme
+                                        Programme
                                     </button>
                                     {programmeDropdown && (
                                         <div className="absolute left-full top-0 bg-white text-black mt-2 rounded shadow-lg">

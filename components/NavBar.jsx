@@ -29,41 +29,37 @@ const NavBar = () => {
                                 <Link href="/about/institute" className="block px-4 py-2 hover:bg-gray-200">
                                     Institute
                                 </Link>
-                                <div className="relative">
-                                    <button
-                                        onClick={toggleProgrammeDropdown}
-                                        className="block w-full text-left px-4 py-2 hover:bg-gray-200"
-                                    >
-                                        Programme
-                                    </button>
-                                    {programmeDropdown && (
-                                        <div className="absolute left-full top-0 bg-white text-black mt-2 rounded shadow-lg">
-                                            <Link href="/about/programme/yearOne" className="block px-4 py-2 hover:bg-gray-200">
-                                                Year One
-                                            </Link>
-                                            <Link href="/about/programme/yearTwo" className="block px-4 py-2 hover:bg-gray-200">
-                                                Year Two
-                                            </Link>
-                                            <Link href="/about/programme/yearThree" className="block px-4 py-2 hover:bg-gray-200">
-                                                Year Three
-                                            </Link>
-                                        </div>
-                                    )}
-                                    <div>
-                                        <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200">
-                                                News
+                                <button
+                                    onClick={toggleProgrammeDropdown}
+                                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                                >
+                                    Programme
+                                </button>
+                                {programmeDropdown && (
+                                    <div className="absolute left-full top-0 bg-white text-black mt-2 rounded shadow-lg">
+                                        <Link href="/about/programme/yearOne" className="block px-4 py-2 hover:bg-gray-200">
+                                            Year One
                                         </Link>
-                                        <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200">
-                                                Events
+                                        <Link href="/about/programme/yearTwo" className="block px-4 py-2 hover:bg-gray-200">
+                                            Year Two
+                                        </Link>
+                                        <Link href="/about/programme/yearThree" className="block px-4 py-2 hover:bg-gray-200">
+                                            Year Three
                                         </Link>
                                     </div>
-                                </div>
+                                )}
+                                <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200">
+                                    News
+                                </Link>
+                                <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200">
+                                    Events
+                                </Link>
                             </div>
                         )}
                     </div>
                     <Link href="/courseUnits" className="hover:text-gray-400">Course Units</Link>
                     <Link href="/timetable" className="hover:text-gray-400">Timetable</Link>
-                    <Link href="/staff" className="hover:text-gray-400">Staff</Link>
+                    <Link href="/faculty" className="hover:text-gray-400">Faculty</Link>
                 </div>
             </div>
         </nav>

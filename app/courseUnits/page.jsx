@@ -81,7 +81,7 @@ const CourseUnitsPage = () => {
     const creditsLeft = MAX_CREDITS - selectedCredits;
 
     return (
-        <div>
+        <div className="p-4">
             <header className="p-4 border-b">
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Course Units</h1>
             </header>

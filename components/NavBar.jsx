@@ -47,14 +47,16 @@ const NavBar = () => {
                                             <Link href="/about/programme/yearThree" className="block px-4 py-2 hover:bg-gray-200">
                                                 Year Three
                                             </Link>
-                                            <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200">
-                                                News
-                                            </Link>
-                                            <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200">
-                                                Events
-                                            </Link>
                                         </div>
                                     )}
+                                    <div>
+                                        <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200">
+                                                News
+                                        </Link>
+                                        <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200">
+                                                Events
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         )}

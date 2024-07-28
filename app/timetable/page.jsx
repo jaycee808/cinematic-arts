@@ -62,19 +62,17 @@ const TimetablePage = () => {
     };
 
     return (
-        <div>
-            <header>
-                <div>
-                    <h1>Your Timetable</h1>
-                </div>
+        <div className="p-4">
+            <header className="p-4 border-b">
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Your Timetable</h1>
             </header>
 
             <main>
                 <div>
                     {daysOfWeek.map(day => (
-                        <Card key={day}>
+                        <Card key={day} className="my-6">
                             <CardHeader>
-                                <CardTitle>{day}</CardTitle>
+                                <CardTitle className="text-3xl font-semibold tracking-tight mt-6 border-b pb-2">{day}</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 {getClassesByDay(day).length > 0 ? (
@@ -82,18 +80,18 @@ const TimetablePage = () => {
                                         <Accordion type="single" collapsible key={index}>
                                             <AccordionItem value={`item-${index}`}>
                                                 <AccordionTrigger>
-                                                    <h3>{classItem.title}</h3>
+                                                    <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">{classItem.title}</h3>
                                                 </AccordionTrigger>
                                                 <AccordionContent>
-                                                    <p>Teacher: {classItem.teacher}</p>
-                                                    <p>Type: {classItem.classType}</p>
-                                                    <p>Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                                    <p className="leading-7 [&:not(:first-child)]:mt-6">Teacher: {classItem.teacher}</p>
+                                                    <p className="leading-7 [&:not(:first-child)]:mt-6">Type: {classItem.classType}</p>
+                                                    <p className="leading-7 [&:not(:first-child)]:mt-6">Time: {classItem.classStart} - {classItem.classEnd}</p>
                                                 </AccordionContent>
                                             </AccordionItem>
                                         </Accordion>
                                     ))
                                 ) : (
-                                    <p>No classes scheduled.</p>
+                                    <p className="leading-7 [&:not(:first-child)]:mt-6">No classes scheduled.</p>
                                 )}
                             </CardContent>
                         </Card>

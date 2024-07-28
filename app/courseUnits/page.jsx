@@ -82,134 +82,136 @@ const CourseUnitsPage = () => {
 
     return (
         <div>
-            <header>
-                <div>
-                    <h1>Course Units</h1>
-                    <div>
-                        <Link href="/timetable">
-                            <Button>Go to Timetable</Button>
-                        </Link>
-                    </div>
-                </div>
+            <header className="p-4 border-b">
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Course Units</h1>
             </header>
 
-            <main>
-                <div>
-                    <h3>Total Credits: {MAX_CREDITS}</h3>
-                    <h3>Credits Chosen: {selectedCredits}</h3>
-                    <h3>Credits Left: {creditsLeft}</h3>
-                </div>
-
-                <h2>Mandatory Units</h2>
-                <div>
-                    {mandatoryUnits.map(unit => (
-                        <Card key={unit._id}>
-                            <CardHeader>
-                                <CardTitle>{unit.title}</CardTitle>
-                                <p>{unit.teacher}</p>
-                            </CardHeader>
-                            <CardContent>
-                                <p>{unit.overview}</p>
-                                <ul>
-                                    {unit.schedule.map((scheduleItem, index) => (
-                                        <li key={index}>
-                                            {scheduleItem.classType}
-                                            <br />
-                                            {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Accordion type="single" collapsible>
-                                    <AccordionItem value={unit._id}>
-                                        <AccordionTrigger>View More Details</AccordionTrigger>
-                                        <AccordionContent>
-                                            <p>{unit.description}</p>
-                                            <h4>Aims:</h4>
-                                            <ul>
-                                                {unit.aims.map((aim, index) => (
-                                                    <li key={index}>{aim}</li>
-                                                ))}
-                                            </ul>
-                                            <h4>Recommended Watching:</h4>
-                                            <ul>
-                                                {unit.recommendedWatching.map((item, index) => (
-                                                    <li key={index}>{item}</li>
-                                                ))}
-                                            </ul>
-                                            <h4>Recommended Reading:</h4>
-                                            <p>{unit.recommendedReading}</p>
-                                            <h4>Credits:</h4>
-                                            <p>{unit.credits}</p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-
-                <h2>Optional Units</h2>
-                <div>
-                    {optionalUnits.map(unit => (
-                        <Card key={unit._id}>
-                            <CardHeader>
-                                <CardTitle>{unit.title}</CardTitle>
-                                <p>{unit.teacher}</p>
-                            </CardHeader>
-                            <CardContent>
-                                <p>{unit.overview}</p>
-                                <ul>
-                                    {unit.schedule.map((scheduleItem, index) => (
-                                        <li key={index}>
-                                            {scheduleItem.classType}
-                                            <br />
-                                            {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Accordion type="single" collapsible>
-                                    <AccordionItem value={unit._id}>
-                                        <AccordionTrigger>View More Details</AccordionTrigger>
-                                        <AccordionContent>
-                                            <p>{unit.description}</p>
-                                            <h4>Aims:</h4>
-                                            <ul>
-                                                {unit.aims.map((aim, index) => (
-                                                    <li key={index}>{aim}</li>
-                                                ))}
-                                            </ul>
-                                            <h4>Recommended Watching:</h4>
-                                            <ul>
-                                                {unit.recommendedWatching.map((item, index) => (
-                                                    <li key={index}>{item}</li>
-                                                ))}
-                                            </ul>
-                                            <h4>Recommended Reading:</h4>
-                                            <p>{unit.recommendedReading}</p>
-                                            <h4>Credits:</h4>
-                                            <p>{unit.credits}</p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                                <Button variant="outline" onClick={() => handleSelectUnit(unit)}>
-                                    {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-
-                {selectedUnits.length > 0 && (
+            <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/3 p-4">
                     <div>
-                        <h3>Selected Units:</h3>
-                        <ul>
-                            {selectedUnits.map(unit => (
-                                <li key={unit._id}>{unit.title}</li>
-                            ))}
-                        </ul>
+                        <h2 className="text-3xl font-semibold tracking-tight">Total Credits</h2>
+                        <p className="leading-7 mt-2">Max: {MAX_CREDITS}</p>
+                        <p className="leading-7">Chosen: {selectedCredits}</p>
+                        <p className="leading-7">Left: {creditsLeft}</p>
                     </div>
-                )}
-            </main>
+
+                    {selectedUnits.length > 0 && (
+                        <div className="mt-4">
+                            <h3 className="text-2xl font-semibold tracking-tight">Selected Units</h3>
+                            <ul className="mt-2 list-disc ml-6">
+                                {selectedUnits.map(unit => (
+                                    <li key={unit._id} className="mt-2">{unit.title}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+
+                <main className="md:w-2/3 p-4 overflow-y-scroll h-screen">
+                    <div className="mb-8">
+                        <h2 className="text-3xl font-semibold tracking-tight mb-4">Mandatory Units</h2>
+                        <div className="space-y-4">
+                            {mandatoryUnits.map(unit => (
+                                <Card key={unit._id}>
+                                    <CardHeader>
+                                        <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
+                                        <p className="leading-7 mt-2">{unit.teacher}</p>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="leading-7 mt-4">{unit.overview}</p>
+                                        <ul className="mt-4 list-disc ml-6">
+                                            {unit.schedule.map((scheduleItem, index) => (
+                                                <li key={index} className="mt-2">
+                                                    {scheduleItem.classType}
+                                                    <br />
+                                                    {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <Accordion type="single" collapsible className="mt-4">
+                                            <AccordionItem value={unit._id}>
+                                                <AccordionTrigger>View More Details</AccordionTrigger>
+                                                <AccordionContent className="mt-2">
+                                                    <p className="leading-7 mt-4">{unit.description}</p>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Aims:</h4>
+                                                    <ul className="mt-2 list-disc ml-6">
+                                                        {unit.aims.map((aim, index) => (
+                                                            <li key={index} className="mt-2">{aim}</li>
+                                                        ))}
+                                                    </ul>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Recommended Watching:</h4>
+                                                    <ul className="mt-2 list-disc ml-6">
+                                                        {unit.recommendedWatching.map((item, index) => (
+                                                            <li key={index} className="mt-2">{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Recommended Reading:</h4>
+                                                    <p className="leading-7 mt-2">{unit.recommendedReading}</p>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Credits:</h4>
+                                                    <p className="leading-7 mt-2">{unit.credits}</p>
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </Accordion>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 className="text-3xl font-semibold tracking-tight mb-4">Optional Units</h2>
+                        <div className="space-y-4">
+                            {optionalUnits.map(unit => (
+                                <Card key={unit._id}>
+                                    <CardHeader>
+                                        <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
+                                        <p className="leading-7 mt-2">{unit.teacher}</p>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="leading-7 mt-4">{unit.overview}</p>
+                                        <ul className="mt-4 list-disc ml-6">
+                                            {unit.schedule.map((scheduleItem, index) => (
+                                                <li key={index} className="mt-2">
+                                                    {scheduleItem.classType}
+                                                    <br />
+                                                    {scheduleItem.dayOfWeek}: {scheduleItem.classStart} - {scheduleItem.classEnd}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <Accordion type="single" collapsible className="mt-4">
+                                            <AccordionItem value={unit._id}>
+                                                <AccordionTrigger>View More Details</AccordionTrigger>
+                                                <AccordionContent className="mt-2">
+                                                    <p className="leading-7 mt-4">{unit.description}</p>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Aims:</h4>
+                                                    <ul className="mt-2 list-disc ml-6">
+                                                        {unit.aims.map((aim, index) => (
+                                                            <li key={index} className="mt-2">{aim}</li>
+                                                        ))}
+                                                    </ul>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Recommended Watching:</h4>
+                                                    <ul className="mt-2 list-disc ml-6">
+                                                        {unit.recommendedWatching.map((item, index) => (
+                                                            <li key={index} className="mt-2">{item}</li>
+                                                        ))}
+                                                    </ul>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Recommended Reading:</h4>
+                                                    <p className="leading-7 mt-2">{unit.recommendedReading}</p>
+                                                    <h4 className="text-2xl font-semibold tracking-tight mt-4">Credits:</h4>
+                                                    <p className="leading-7 mt-2">{unit.credits}</p>
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        </Accordion>
+                                        <Button variant="outline" onClick={() => handleSelectUnit(unit)} className="mt-4">
+                                            {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
     );
 };

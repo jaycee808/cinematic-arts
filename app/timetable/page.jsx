@@ -66,11 +66,6 @@ const TimetablePage = () => {
             <header>
                 <div>
                     <h1>Your Timetable</h1>
-                    <nav>
-                        <Link href="/courseUnits">
-                            <Button>Back to Course Unit List</Button>
-                        </Link>
-                    </nav>
                 </div>
             </header>
 

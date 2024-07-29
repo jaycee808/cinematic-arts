@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{jsx, ts,tsx}',
-    './components/**/*.{jsx, ts,tsx}',
-    './app/**/*.{jsx, ts,tsx}',
-    './src/**/*.{jsx, ts,tsx}',
+    './pages/**/*.{jsx,ts,tsx}',
+    './components/**/*.{jsx,ts,tsx}',
+    './app/**/*.{jsx,ts,tsx}',
+    './src/**/*.{jsx,ts,tsx}',
   ],
   prefix: "",
   theme: {
@@ -74,6 +76,13 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        anton: ['"Anton"', ...defaultTheme.fontFamily.sans],
+        antonio: ['"Antonio"', ...defaultTheme.fontFamily.sans],
+        interTight: ['"Inter Tight"', ...defaultTheme.fontFamily.sans],
+        inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        workSans: ['"Work Sans"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

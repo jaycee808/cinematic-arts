@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-#logo {
+.font-anton {
     font-family: "Anton", sans-serif;
 }
 
-.navbar {
-    font-family: "Work Sans", sans-serif;
-    text-transform: uppercase;
-}
-
-h1, h2, h3, h4 {
+.font-antonio {
     font-family: "Antonio", sans-serif;
 }
 
-p, ul, li, button {
+.font-interTight {
+    font-family: "Inter Tight", sans-serif;
+}
+
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+.font-workSans {
     font-family: "Work Sans", sans-serif;
 }

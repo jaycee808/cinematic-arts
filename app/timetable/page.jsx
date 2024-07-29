@@ -62,12 +62,12 @@ const TimetablePage = () => {
     };
 
     return (
-        <div className="p-4">
+        <div className="p-4 font-workSans">
             <header className="p-4 border-b">
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Your Timetable</h1>
             </header>
 
-            <main className="grid grid-cols-5 gap-4 py-4">
+            <main className="grid grid-cols-5 gap-4 p-4">
                 {daysOfWeek.map(day => {
                     const classes = getClassesByDay(day);
                     return (

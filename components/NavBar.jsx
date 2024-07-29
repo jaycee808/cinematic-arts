@@ -9,57 +9,62 @@ const NavBar = () => {
 
     const toggleAboutDropdown = () => setAboutDropdown(!aboutDropdown);
     const toggleProgrammeDropdown = () => setProgrammeDropdown(!programmeDropdown);
+    
+    const closeDropdowns = () => {
+        setAboutDropdown(false);
+        setProgrammeDropdown(false);
+    };
 
     return (
         <nav className="p-4">
             <div>
-                <div id="logo" className="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4 sm:mb-0">
-                    <Link href="/">CINEMATIC ARTS</Link>
+                <div id="logo" className="text-7xl border-b-2 pb-2 mb-4">
+                    <Link href="/">CINEMATIC ARTS<span className="text-red-500">.</span></Link>
                 </div>
-                <div className="flex justify-end items-center space-x-8">
+                <div className="navbar flex lg:justify-end md:justify-center sm:justify-center space-x-4 px-2 text-xl font-bold">
                     <div className="relative z-50">
                         <button
                             onClick={toggleAboutDropdown}
-                            className="hover:text-gray-400"
+                            className="hover:text-gray-400 navbar"
                         >
                             About
                         </button>
                         {aboutDropdown && (
                             <div className="absolute bg-white text-black mt-2 rounded shadow-lg">
-                                <Link href="/about/institute" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/about/institute" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     Institute
                                 </Link>
                                 <button
                                     onClick={toggleProgrammeDropdown}
-                                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                                    className="block w-full text-left px-4 py-2 hover:bg-gray-200 navbar"
                                 >
                                     Programme
                                 </button>
                                 {programmeDropdown && (
                                     <div className="absolute left-full top-0 bg-white text-black mt-2 rounded shadow-lg">
-                                        <Link href="/about/programme/yearOne" className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link href="/about/programme/yearOne" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                             Year One
                                         </Link>
-                                        <Link href="/about/programme/yearTwo" className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link href="/about/programme/yearTwo" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                             Year Two
                                         </Link>
-                                        <Link href="/about/programme/yearThree" className="block px-4 py-2 hover:bg-gray-200">
+                                        <Link href="/about/programme/yearThree" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                             Year Three
                                         </Link>
                                     </div>
                                 )}
-                                <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     News
                                 </Link>
-                                <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     Events
                                 </Link>
                             </div>
                         )}
                     </div>
-                    <Link href="/courseUnits" className="hover:text-gray-400">Course Units</Link>
-                    <Link href="/timetable" className="hover:text-gray-400">Timetable</Link>
-                    <Link href="/faculty" className="hover:text-gray-400">Faculty</Link>
+                    <Link href="/courseUnits" className="hover:text-gray-400" onClick={closeDropdowns}>Course Units</Link>
+                    <Link href="/timetable" className="hover:text-gray-400" onClick={closeDropdowns}>Timetable</Link>
+                    <Link href="/faculty" className="hover:text-gray-400" onClick={closeDropdowns}>Faculty</Link>
                 </div>
             </div>
         </nav>

@@ -9,7 +9,7 @@ export const metadata = {
 
 const PrimaryLayout = ({ children }) => {
     return (
-        <html lang="en">
+        <html lang="en" className="bg-black text-slate-50">
             <body>
                 <div>
                     <NavBar />

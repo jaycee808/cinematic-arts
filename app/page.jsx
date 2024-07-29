@@ -17,8 +17,10 @@ const HomePage = () => {
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-white lg:text-5xl">
-                        Welcome to The Cinematic Arts Institute
+                    <h1 className="text-3xl font-extrabold tracking-tight text-white lg:text-5xl text-center">
+                        Welcome to
+                        <br></br>
+                        The Cinematic Arts Institute
                     </h1>
                     <p className="leading-7 mt-6 text-xl text-white">
                         Where stories come to life
@@ -27,10 +29,10 @@ const HomePage = () => {
             </div>
             <section className="mt-10 flex justify-center space-x-4">
                 <Link href="/courseUnits">
-                    <Button>Choose your Course Units</Button>
+                    <Button className="bg-red-600 text-white hover:bg-red-700">Choose Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button>View your Timetable</Button>
+                    <Button className="bg-red-600 text-white hover:bg-red-700">View Timetable</Button>
                 </Link>
             </section>
 
@@ -50,25 +52,25 @@ const HomePage = () => {
                 <p className="leading-7 mt-6 text-lg">
                     Our BA (Hons) Cinematic Arts programme offers a comprehensive exploration of the theory, history, and practice of cinema. This program prepares students for exciting careers in the dynamic world of film and television through a blend of theoretical knowledge and practical experience.
                 </p>
-                <div className="flex justify-between mt-8">
-                    <div className="w-1/3">
-                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-8 lg:space-y-0 mt-8">
+                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year One
                         </h3>
                         <p className="leading-7 mt-6 text-lg">
                             In Year One, you will lay the foundational stones of your cinematic education with modules such as Introduction to Film Studies, which covers fundamental film terminology, history, and concepts, and Film Production Fundamentals, offering hands-on experience in camera operation, lighting, sound, and editing.
                         </p>
                     </div>
-                    <div className="w-1/3">
-                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year Two
                         </h3>
                         <p className="leading-7 mt-6 text-lg">
                             In Year Two, you will deepen your understanding with courses like Film & Society, exploring the relationship between film and societal contexts, and Documentary Filmmaking, focusing on non-fiction storytelling techniques.
                         </p>
                     </div>
-                    <div className="w-1/3">
-                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year Three
                         </h3>
                         <p className="leading-7 mt-6 text-lg">

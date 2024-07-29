@@ -18,10 +18,10 @@ const NavBar = () => {
     return (
         <nav className="p-4">
             <div>
-                <div id="logo" className="text-7xl border-b-2 pb-2 mb-4">
+                <div id="logo" className="text-5xl md:text-8xl border-b-2 pb-2 mb-4">
                     <Link href="/">CINEMATIC ARTS<span className="text-red-500">.</span></Link>
                 </div>
-                <div className="navbar flex lg:justify-end md:justify-center sm:justify-center space-x-4 px-2 text-xl font-bold">
+                <div className="navbar flex lg:justify-end md:justify-center sm:justify-center space-x-2 md:space-x-4 md:px-2 text-sm sm:text-xl">
                     <div className="relative z-50">
                         <button
                             onClick={toggleAboutDropdown}

@@ -87,27 +87,9 @@ const CourseUnitsPage = () => {
             </header>
 
             <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/3 p-4">
-                    <div>
-                        <h2 className="text-3xl font-semibold tracking-tight">Total Credits</h2>
-                        <p className="leading-7 mt-2">Max: {MAX_CREDITS}</p>
-                        <p className="leading-7">Chosen: {selectedCredits}</p>
-                        <p className="leading-7">Left: {creditsLeft}</p>
-                    </div>
-
-                    {selectedUnits.length > 0 && (
-                        <div className="mt-4">
-                            <h3 className="text-2xl font-semibold tracking-tight">Selected Units</h3>
-                            <ul className="mt-2 list-disc ml-6">
-                                {selectedUnits.map(unit => (
-                                    <li key={unit._id} className="mt-2">{unit.title}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-                </div>
-
-                <main className="md:w-2/3 p-4 overflow-y-scroll h-screen">
+                
+                { /* Mandatory units section */ }
+                <main className="md:w-3/4 p-4 overflow-y-scroll h-screen">
                     <div className="mb-8">
                         <h2 className="text-3xl font-semibold tracking-tight mb-4">Mandatory Units</h2>
                         <div className="space-y-4">
@@ -158,6 +140,7 @@ const CourseUnitsPage = () => {
                         </div>
                     </div>
 
+                    {/* Optional units section */}
                     <div>
                         <h2 className="text-3xl font-semibold tracking-tight mb-4">Optional Units</h2>
                         <div className="space-y-4">
@@ -211,6 +194,28 @@ const CourseUnitsPage = () => {
                         </div>
                     </div>
                 </main>
+                
+                {/* Selected units section */}
+                <div className="md:w-1/4 p-4">
+                    <div>
+                        <h2 className="text-3xl font-semibold tracking-tight">Total Credits</h2>
+                        <p className="leading-7 mt-2">Max: {MAX_CREDITS}</p>
+                        <p className="leading-7">Chosen: {selectedCredits}</p>
+                        <p className="leading-7">Left: {creditsLeft}</p>
+                    </div>
+
+                    {selectedUnits.length > 0 && (
+                        <div className="mt-4">
+                            <h3 className="text-2xl font-semibold tracking-tight">Selected Units</h3>
+                            <ul className="mt-2 list-disc ml-6">
+                                {selectedUnits.map(unit => (
+                                    <li key={unit._id} className="mt-2">{unit.title}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+
             </div>
         </div>
     );

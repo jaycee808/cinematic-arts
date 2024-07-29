@@ -86,18 +86,18 @@ const CourseUnitsPage = () => {
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl font-workSans">Course Units</h1>
             </header>
 
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row font-workSans">
                 
                 { /* Mandatory units section */ }
                 <main className="md:w-3/4 p-4 overflow-y-scroll h-screen">
                     <div className="mb-8">
-                        <h2 className="text-3xl font-semibold tracking-tight mb-4 font-workSans">Mandatory Units</h2>
-                        <div className="space-y-4 font-workSans">
+                        <h2 className="text-3xl font-semibold tracking-tight mb-4">Mandatory Units</h2>
+                        <div className="space-y-4">
                             {mandatoryUnits.map(unit => (
-                                <Card key={unit._id}>
+                                <Card key={unit._id} className="border border-darkGray">
                                     <CardHeader>
-                                        <CardTitle className="text-2xl font-semibold tracking-tight font-workSans">{unit.title}</CardTitle>
-                                        <p className="leading-7 mt-2 font-workSans">{unit.teacher}</p>
+                                        <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
+                                        <p className="leading-7 mt-2 font-workSans text-lightGray">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="leading-7 mt-4">{unit.overview}</p>
@@ -145,10 +145,10 @@ const CourseUnitsPage = () => {
                         <h2 className="text-3xl font-semibold tracking-tight mb-4 font-workSans">Optional Units</h2>
                         <div className="space-y-4 font-workSans">
                             {optionalUnits.map(unit => (
-                                <Card key={unit._id}>
+                                <Card key={unit._id} className="border border-darkGray">
                                     <CardHeader>
                                         <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
-                                        <p className="leading-7 mt-2">{unit.teacher}</p>
+                                        <p className="leading-7 mt-2 text-lightGray">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="leading-7 mt-4">{unit.overview}</p>
@@ -196,7 +196,7 @@ const CourseUnitsPage = () => {
                 </main>
                 
                 {/* Selected units section */}
-                <div className="md:w-1/4 p-4">
+                <div className="md:w-1/4 p-4 font-workSans">
                     <div>
                         <h2 className="text-3xl font-semibold tracking-tight">Total Credits</h2>
                         <p className="leading-7 mt-2">Max: {MAX_CREDITS}</p>

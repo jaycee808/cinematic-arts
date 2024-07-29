@@ -78,7 +78,7 @@ const TimetablePage = () => {
                             <div className="col-span-4">
                                 {classes.length > 0 ? (
                                     classes.map((classItem, index) => (
-                                        <Card key={index} className="mb-4">
+                                        <Card key={index} className="mb-4 border border-darkGray">
                                             <CardContent>
                                                 <Accordion type="single" collapsible>
                                                     <AccordionItem value={`item-${index}`}>

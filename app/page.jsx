@@ -53,7 +53,7 @@ const HomePage = () => {
                     Our BA (Hons) Cinematic Arts programme offers a comprehensive exploration of the theory, history, and practice of cinema. This program prepares students for exciting careers in the dynamic world of film and television through a blend of theoretical knowledge and practical experience.
                 </p>
                 <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-8 lg:space-y-0 mt-8 font-workSans">
-                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                    <div className="w-full lg:w-1/3 p-4 border border-darkGray rounded-lg shadow-md ">
                         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year One
                         </h3>
@@ -61,7 +61,7 @@ const HomePage = () => {
                             In Year One, you will lay the foundational stones of your cinematic education with modules such as Introduction to Film Studies, which covers fundamental film terminology, history, and concepts, and Film Production Fundamentals, offering hands-on experience in camera operation, lighting, sound, and editing.
                         </p>
                     </div>
-                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                    <div className="w-full lg:w-1/3 p-4 border border-darkGray">
                         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year Two
                         </h3>
@@ -69,7 +69,7 @@ const HomePage = () => {
                             In Year Two, you will deepen your understanding with courses like Film & Society, exploring the relationship between film and societal contexts, and Documentary Filmmaking, focusing on non-fiction storytelling techniques.
                         </p>
                     </div>
-                    <div className="w-full lg:w-1/3 p-4 border border-gray-200 rounded-lg shadow-md">
+                    <div className="w-full lg:w-1/3 p-4 border border-darkGray rounded-lg shadow-md">
                         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-red-600">
                             Year Three
                         </h3>

@@ -16,27 +16,27 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="p-4">
+        <nav className="p-6 lg:px-24">
             <div>
-                <div id="logo" className="text-5xl md:text-8xl border-b-2 pb-2 mb-4 font-anton">
-                    <Link href="/">CINEMATIC ARTS<span className="text-red">.</span></Link>
+                <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-2 mb-4 font-anton">
+                    <Link href="/">CINEMATIC ARTS<span className="text-red-600">.</span></Link>
                 </div>
-                <div className="navbar flex lg:justify-end md:justify-center sm:justify-center space-x-3 md:space-x-4 md:px-2 text-base sm:text-xl font-workSans">
-                    <div className="relative z-50">
+                <div className="navbar flex justify-center lg:justify-end space-x-4 text-xl font-interTight">
+                    <div className="relative">
                         <button
                             onClick={toggleAboutDropdown}
-                            className="hover:text-gray-400 navbar"
+                            className="hover:text-gray-500"
                         >
                             About
                         </button>
                         {aboutDropdown && (
-                            <div className="absolute bg-white text-black mt-2 rounded shadow-lg">
+                            <div className="absolute bg-white text-black mt-2 rounded shadow-lg z-50">
                                 <Link href="/about/institute" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     Institute
                                 </Link>
                                 <button
                                     onClick={toggleProgrammeDropdown}
-                                    className="block w-full text-left px-4 py-2 hover:bg-gray-200 navbar"
+                                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
                                 >
                                     Programme
                                 </button>
@@ -53,18 +53,18 @@ const NavBar = () => {
                                         </Link>
                                     </div>
                                 )}
-                                <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
+                                {/* <Link href="/about/news" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     News
                                 </Link>
                                 <Link href="/about/events" className="block px-4 py-2 hover:bg-gray-200" onClick={closeDropdowns}>
                                     Events
-                                </Link>
+                                </Link> */}
                             </div>
                         )}
                     </div>
-                    <Link href="/courseUnits" className="hover:text-gray-400" onClick={closeDropdowns}>Course Units</Link>
-                    <Link href="/timetable" className="hover:text-gray-400" onClick={closeDropdowns}>Timetable</Link>
-                    <Link href="/faculty" className="hover:text-gray-400" onClick={closeDropdowns}>Faculty</Link>
+                    <Link href="/courseUnits" className="hover:text-gray-500" onClick={closeDropdowns}>Course Units</Link>
+                    <Link href="/timetable" className="hover:text-gray-500" onClick={closeDropdowns}>Timetable</Link>
+                    <Link href="/faculty" className="hover:text-gray-500" onClick={closeDropdowns}>Faculty</Link>
                 </div>
             </div>
         </nav>

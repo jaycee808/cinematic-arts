@@ -174,7 +174,7 @@ const CourseUnitsPage = () => {
                                                 </AccordionContent>
                                             </AccordionItem>
                                         </Accordion>
-                                        <Button variant="outline" onClick={() => handleSelectUnit(unit)} className="mt-4 text-xl uppercase">
+                                        <Button variant="outline" onClick={() => handleSelectUnit(unit)} className="mt-4 text-xl uppercase bg-red">
                                             {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
                                         </Button>
                                     </CardContent>

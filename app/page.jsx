@@ -27,16 +27,16 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <section className="mt-10 flex justify-center space-x-4">
+            <section className="mt-10 flex justify-center space-x-4 font-interTight">
                 <Link href="/courseUnits">
-                    <Button className="bg-red-600 hover:bg-red-700 border-2 border-white text-white">Choose Course Units</Button>
+                    <Button className="bg-red hover:black border-2 border-white text-white">Choose Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-red-600 hover:bg-red-700 border-2 border-white text-white">View Timetable</Button>
+                    <Button className="bg-red hover:bg-black border-2 border-white text-white">View Timetable</Button>
                 </Link>
             </section>
 
-            <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24">
+            <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
                 <h2 className="text-4xl font-semibold tracking-tight mb-6">
                     Introduction to the Institute
                 </h2>
@@ -45,7 +45,7 @@ const HomePage = () => {
                 </p>
             </section>
 
-            <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24">
+            <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
                 <h2 className="text-4xl font-semibold tracking-tight mb-6">
                     Overview of the BA (Hons) Cinematic Arts Programme
                 </h2>

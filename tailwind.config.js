@@ -56,7 +56,7 @@ module.exports = {
         // New Colors
         black: "#111111",
         ghostWhite: "#F8F8FF",
-        red: "#FF0000",
+        red: "#BC2C3D",
         darkGray: "#2C2C2C",
         lightGray: "#999DA0",
       },

@@ -19,13 +19,13 @@ const NavBar = () => {
         <nav className="p-6 lg:px-24">
             <div>
                 <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-2 mb-4 font-anton">
-                    <Link href="/">CINEMATIC ARTS<span className="text-red-600">.</span></Link>
+                    <Link href="/">CINEMATIC ARTS<span className="text-red">.</span></Link>
                 </div>
                 <div className="navbar flex justify-center lg:justify-end space-x-4 text-xl font-interTight">
                     <div className="relative">
                         <button
                             onClick={toggleAboutDropdown}
-                            className="hover:text-gray-500"
+                            className="hover:text-lightGray"
                         >
                             About
                         </button>

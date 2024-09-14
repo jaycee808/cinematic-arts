@@ -7,86 +7,86 @@ const Faculty = () => {
         {
             name: 'Dr Olivia Matthews',
             courses: [
-                'Introduction to Film Studies (Year One)',
-                'Auteur Theory (Year Two)',
-                'Experimental and Avant-Garde Film (Year Three)',
+                'Introduction to Film Studies',
+                'Auteur Theory',
+                'Experimental & Avant-Garde Film',
             ]
         },
         {
             name: 'Professor Stephen Turner',
             courses: [
-                'Film Production Fundamentals (Year One)',
-                'Documentary Filmmaking (Year Two)',
-                'Film Production: From Script to Screen (Year Three, with Dr Alex Carter)',
+                'Film Production Fundamentals',
+                'Documentary Filmmaking',
+                'Film Production: From Script to Screen',
             ]
         },
         {
             name: 'Professor Rajesh Kapoor',
             courses: [
-                'World Cinema (Year One)',
-                'Film & Society (Year Two)',
+                'World Cinema',
+                'Film & Society',
             ]
         },
         {
             name: 'Professor Michael Hughes',
             courses: [
-                'Screenwriting Fundamentals (Year One)',
-                'Creative Writing for Visual Media (Year Two)',
-                'Screenwriting for Feature Film (Year Three)',
+                'Screenwriting Fundamentals',
+                'Creative Writing for Visual Media',
+                'Screenwriting for Feature Film',
             ]
         },
         {
             name: 'Dr Jessica Wong',
             courses: [
-                'Visual Effects & Cinematography (Year One)',
-                'Animation and Visual Effects (Year Three)',
+                'Visual Effects & Cinematography',
+                'Animation and Visual Effects',
             ]
         },
         {
             name: 'Professor Anna Martinez',
             courses: [
-                'History of Television (Year One)',
-                'Gender and Sexuality in Film (Year Three)',
+                'History of Television',
+                'Gender and Sexuality in Film',
             ]
         },
         {
             name: 'Dr Daniel Collins',
             courses: [
-                'Sound Design for Film (Year One)',
-                'Advanced Sound Design in Film (Year Three)',
+                'Sound Design for Film',
+                'Advanced Sound Design in Film',
             ]
         },
         {
             name: 'Dr Emma Taylor',
             courses: [
-                'Film History (Year One)',
+                'Film History',
             ]
         },
         {
             name: 'Dr Alex Carter',
             courses: [
-                'Directing & Filmmaking Process (Year Two)',
-                'Film Production: From Script to Screen (Year Three, with Professor Stephen Turner)',
+                'Directing & Filmmaking Process',
+                'Film Production: From Script to Screen',
             ]
         },
         {
             name: 'Professor Maya Patel',
             courses: [
-                'Horror and the Supernatural in Film and TV (Year Two)',
-                'Advanced Film Theory (Year Three)',
+                'Horror and the Supernatural in Film and TV',
+                'Advanced Film Theory',
             ]
         },
         {
             name: 'Dr Chloe Summers',
             courses: [
-                'European Cinema: Diversity in Filmmaking (Year Two)',
+                'European Cinema: Diversity in Filmmaking',
             ]
         },
         {
             name: 'Dr Ren Li',
             courses: [
-                'Asian Cinema: From Tradition to Global Influence (Year Two)',
-                'Global Cinema: Transnational Perspectives (Year Three)',
+                'Asian Cinema: From Tradition to Global Influence',
+                'Global Cinema: Transnational Perspectives',
             ]
         },
     ];

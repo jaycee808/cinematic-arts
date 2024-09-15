@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Cinematic Arts Institute 🎬
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=for-the-badge&logo=Next.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=TailwindCSS&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/Shadcn%20UI-%23000000.svg?style=for-the-badge&logo=Shadcn&logoColor=white)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Cinematic Arts Institute is an interactive platform designed for film students to explore courses and create personalised timetables. It offers a user-friendly experience, allowing students to select modules based on their preferences and automatically generates a timetable to fit their choices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshot
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<p align="center">
+  <img src="./public/assets/images/cinematic-arts-screenshot.png" width="1000" height="auto" title="Screenshot of application">
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Link to deployed site
 
-## Learn More
+[https://cinematic-arts.vercel.app/](https://cinematic-arts.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=Next.js&logoColor=white)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat&logo=MongoDB&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=flat&logo=TailwindCSS&logoColor=white)
+- ![Shadcn UI](https://img.shields.io/badge/Shadcn%20UI-%23000000.svg?style=flat&logo=Shadcn&logoColor=white)

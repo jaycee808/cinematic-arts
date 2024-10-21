@@ -29,16 +29,24 @@ const CourseUnitsPage = () => {
                 const response = await fetch('/api/units');
                 const data = await response.json();
                 setCourseUnits(data);
-                const mandatoryUnits = data.filter(unit => unit.status === "Mandatory");
-                setSelectedUnits(mandatoryUnits);
-                localStorage.setItem('selectedUnits', JSON.stringify(mandatoryUnits));
-            } catch (error) {
+
+                // Retrieve any selected units from local storage
+                const savedUnits = JSON.parse(localStorage.getItem('selectedUnits')) || [];
+                if (savedUnits.length > 0) {
+                    // if there are any selected units display them
+                    setSelectedUnits(savedUnits);
+                } else {
+                    const mandatoryUnits = data.filter(unit => unit.status === "Mandatory");
+                    setSelectedUnits(mandatoryUnits);
+                    localStorage.setItem('selectedUnits', JSON.stringify(mandatoryUnits));
+                } 
+                
+                } catch (error) {
                 console.error('Failed to fetch course units:', error);
             }
         };
         fetchCourseUnits();
-        const savedUnits = JSON.parse(localStorage.getItem('selectedUnits')) || [];
-        setSelectedUnits(savedUnits);
+        
     }, []);
 
     const handleSelectUnit = (unit) => {

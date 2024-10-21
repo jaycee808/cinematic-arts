@@ -6,11 +6,11 @@ const Institute = () => {
     return (
         <div className="p-6 lg:px-24 font-interTight">
             <header className="p-4 border-b">
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">The Institute</h1>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-red">The Institute</h1>
             </header>
 
             <section className="container mx-auto my-8 p-4">
-                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-lightGray">
                     Mission
                 </h2>
                 <p className="leading-7 mt-6 text-lg">
@@ -19,7 +19,7 @@ const Institute = () => {
             </section>
 
             <section className="container mx-auto my-8 p-4">
-                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-lightGray">
                     Vision
                 </h2>
                 <p className="leading-7 mt-6 text-lg">
@@ -28,7 +28,7 @@ const Institute = () => {
             </section>
 
             <section className="container mx-auto my-8 p-4">
-                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+                <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight text-lightGray">
                     History
                 </h2>
                 <p className="leading-7 mt-6 text-lg">

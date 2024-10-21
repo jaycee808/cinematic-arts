@@ -29,15 +29,15 @@ const HomePage = () => {
 
             <section className="mt-10 flex justify-center space-x-4 font-interTight">
                 <Link href="/courseUnits">
-                    <Button className="bg-red hover:black border-2 border-white text-white">Choose Course Units</Button>
+                    <Button className="bg-red hover:bg-darkGray border-2 border-white text-white">Choose Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-red hover:bg-black border-2 border-white text-white">View Timetable</Button>
+                    <Button className="bg-red hover:bg-darkGray border-2 border-white text-white">View Timetable</Button>
                 </Link>
             </section>
 
             <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
-                <h2 className="text-4xl font-semibold tracking-tight mb-6">
+                <h2 className="text-4xl font-semibold tracking-tight mb-6 text-lightGray">
                     Introduction to the Institute
                 </h2>
                 <p className="leading-7 text-lg lg:text-xl">
@@ -46,13 +46,13 @@ const HomePage = () => {
             </section>
 
             <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
-                <h2 className="text-4xl font-semibold tracking-tight mb-6">
+                <h2 className="text-4xl font-semibold tracking-tight mb-6 text-lightGray">
                     Overview of the BA (Hons) Cinematic Arts Programme
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
 
-                        <Link href="/about/programme/yearOne" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                        <Link href="/about/programme/yearOne" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
                             Year One
                         </Link>
 
@@ -62,7 +62,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearTwo" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                        <Link href="/about/programme/yearTwo" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
                             Year Two
                         </Link>
 
@@ -72,7 +72,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearThree" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                        <Link href="/about/programme/yearThree" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
                             Year Three
                         </Link>
 

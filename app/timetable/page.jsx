@@ -54,7 +54,7 @@ const TimetablePage = () => {
     return (
         <div className="px-4 lg:px-24 py-6 font-interTight">
             <header className="mb-8">
-                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl">Your Timetable</h1>
+                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
             </header>
 
             <main className="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -73,7 +73,7 @@ const TimetablePage = () => {
                                                 <Accordion type="single" collapsible>
                                                     <AccordionItem value={`item-${index}`}>
                                                         <AccordionTrigger>
-                                                            <h3 className="text-2xl font-semibold tracking-tight">{classItem.title}</h3>
+                                                            <h3 className="text-2xl font-semibold tracking-tight text-red">{classItem.title}</h3>
                                                         </AccordionTrigger>
                                                         <AccordionContent>
                                                             <p className="mt-4 leading-7">Teacher: {classItem.teacher}</p>

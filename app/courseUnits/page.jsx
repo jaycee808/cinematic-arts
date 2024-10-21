@@ -81,7 +81,7 @@ const CourseUnitsPage = () => {
     return (
         <div className="px-4 lg:px-24 py-6 font-interTight">
             <header className="mb-8">
-                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl">Course Units</h1>
+                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Course Units</h1>
             </header>
 
             <div className="flex flex-col lg:flex-row">
@@ -93,7 +93,7 @@ const CourseUnitsPage = () => {
                             {mandatoryUnits.map(unit => (
                                 <Card key={unit._id} className="border border-gray-300 rounded-lg shadow-md">
                                     <CardHeader>
-                                        <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
+                                        <CardTitle className="text-3xl font-semibold tracking-tight text-red">{unit.title}</CardTitle>
                                         <p className="text-lightGray mt-2 text-lg">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
@@ -109,24 +109,24 @@ const CourseUnitsPage = () => {
                                         </ul>
                                         <Accordion type="single" collapsible className="mt-4 text-xl">
                                             <AccordionItem value={unit._id}>
-                                                <AccordionTrigger>View More Details</AccordionTrigger>
+                                                <AccordionTrigger className="text-lightGray">View More Details</AccordionTrigger>
                                                 <AccordionContent>
                                                     <p className="mt-4 text-lg">{unit.description}</p>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-xl">Aims:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-xl text-lightGray">Aims:</h4>
                                                     <ul className="mt-2 list-disc ml-6 text-lg">
                                                         {unit.aims.map((aim, index) => (
                                                             <li key={index} className="mt-2">{aim}</li>
                                                         ))}
                                                     </ul>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Recommended Watching:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Recommended Watching:</h4>
                                                     <ul className="mt-2 list-disc ml-6 text-lg">
                                                         {unit.recommendedWatching.map((item, index) => (
                                                             <li key={index} className="mt-2">{item}</li>
                                                         ))}
                                                     </ul>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Recommended Reading:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Recommended Reading:</h4>
                                                     <p className="mt-2 text-lg">{unit.recommendedReading}</p>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Credits:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Credits:</h4>
                                                     <p className="mt-2 text-lg">{unit.credits}</p>
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -144,7 +144,7 @@ const CourseUnitsPage = () => {
                             {optionalUnits.map(unit => (
                                 <Card key={unit._id} className="border border-gray-300 rounded-lg shadow-md">
                                     <CardHeader>
-                                        <CardTitle className="text-2xl font-semibold tracking-tight">{unit.title}</CardTitle>
+                                        <CardTitle className="text-3xl font-semibold tracking-tight text-red">{unit.title}</CardTitle>
                                         <p className="text-lightGray mt-2 text-lg">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
@@ -160,24 +160,24 @@ const CourseUnitsPage = () => {
                                         </ul>
                                         <Accordion type="single" collapsible className="mt-4 text-xl">
                                             <AccordionItem value={unit._id}>
-                                                <AccordionTrigger>View More Details</AccordionTrigger>
+                                                <AccordionTrigger className="text-lightGray">View More Details</AccordionTrigger>
                                                 <AccordionContent>
                                                     <p className="mt-4 text-lg">{unit.description}</p>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-xl">Aims:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-xl text-lightGray">Aims:</h4>
                                                     <ul className="mt-2 list-disc ml-6 text-lg">
                                                         {unit.aims.map((aim, index) => (
                                                             <li key={index} className="mt-2">{aim}</li>
                                                         ))}
                                                     </ul>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Recommended Watching:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Recommended Watching:</h4>
                                                     <ul className="mt-2 list-disc ml-6 text-lg">
                                                         {unit.recommendedWatching.map((item, index) => (
                                                             <li key={index} className="mt-2">{item}</li>
                                                         ))}
                                                     </ul>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Recommended Reading:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Recommended Reading:</h4>
                                                     <p className="mt-2 text-lg">{unit.recommendedReading}</p>
-                                                    <h4 className="text-xl font-semibold tracking-tight mt-4">Credits:</h4>
+                                                    <h4 className="text-xl font-semibold tracking-tight mt-4 text-lightGray">Credits:</h4>
                                                     <p className="mt-2 text-lg">{unit.credits}</p>
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -195,7 +195,7 @@ const CourseUnitsPage = () => {
                 {/* Selected Units Section */}
                 <aside className="lg:w-1/4 pl-6">
                     <div>
-                        <h2 className="text-3xl font-semibold tracking-tight mb-4">Total Credits</h2>
+                        <h2 className="text-3xl font-semibold tracking-tight mb-4 text-red">Total Credits</h2>
                         <p className="leading-7 text-lg">Max: {MAX_CREDITS}</p>
                         <p className="leading-7 text-lg">Chosen: {selectedCredits}</p>
                         <p className="leading-7 text-lg">Left: {creditsLeft}</p>
@@ -203,7 +203,7 @@ const CourseUnitsPage = () => {
 
                     {selectedUnits.length > 0 && (
                         <div className="mt-8">
-                            <h3 className="text-3xl font-semibold tracking-tight">Selected Units</h3>
+                            <h3 className="text-3xl font-semibold tracking-tight text-red">Selected Units</h3>
                             <ul className="mt-4 list-disc ml-6 text-lg">
                                 {selectedUnits.map(unit => (
                                     <li key={unit._id} className="mt-2">{unit.title}</li>

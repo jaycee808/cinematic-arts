@@ -51,19 +51,31 @@ const HomePage = () => {
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-semibold tracking-tight text-red-600 mb-4">Year One</h3>
+
+                        <Link href="/about/programme/yearOne" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                            Year One
+                        </Link>
+
                         <p className="leading-7 text-lg">
                             In Year One, you will lay the foundational stones of your cinematic education with modules such as Introduction to Film Studies and Film Production Fundamentals.
                         </p>
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-semibold tracking-tight text-red-600 mb-4">Year Two</h3>
+                        
+                        <Link href="/about/programme/yearTwo" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                            Year Two
+                        </Link>
+
                         <p className="leading-7 text-lg">
                             In Year Two, you will deepen your understanding with courses like Film & Society and Documentary Filmmaking.
                         </p>
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-semibold tracking-tight text-red-600 mb-4">Year Three</h3>
+                        
+                        <Link href="/about/programme/yearThree" className="block hover:text-gray-200 text-2xl font-semibold tracking-tight text-red mb-4">
+                            Year Three
+                        </Link>
+
                         <p className="leading-7 text-lg">
                             By Year Three, you will be ready to specialise, engaging in advanced modules such as Advanced Film Theory and Film Production: From Script to Screen.
                         </p>

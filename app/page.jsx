@@ -29,10 +29,10 @@ const HomePage = () => {
 
             <section className="mt-10 flex justify-center space-x-4 font-interTight">
                 <Link href="/courseUnits">
-                    <Button className="bg-red hover:bg-darkGray border-2 border-white text-white">Choose Course Units</Button>
+                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white text-xl">Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-red hover:bg-darkGray border-2 border-white text-white">View Timetable</Button>
+                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white text-xl">View Timetable</Button>
                 </Link>
             </section>
 
@@ -52,7 +52,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
 
-                        <Link href="/about/programme/yearOne" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
+                        <Link href="/about/programme/yearOne" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
                             Year One
                         </Link>
 
@@ -62,7 +62,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearTwo" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
+                        <Link href="/about/programme/yearTwo" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
                             Year Two
                         </Link>
 
@@ -72,7 +72,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearThree" className="block hover:text-red text-2xl font-semibold tracking-tight text-lightGray mb-4">
+                        <Link href="/about/programme/yearThree" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
                             Year Three
                         </Link>
 

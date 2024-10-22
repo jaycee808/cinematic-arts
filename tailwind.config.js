@@ -57,6 +57,7 @@ module.exports = {
         black: "#111111",
         ghostWhite: "#F8F8FF",
         red: "#BC2C3D",
+        brightRed: "#CC0000",
         darkGray: "#2C2C2C",
         lightGray: "#999DA0",
       },
@@ -88,5 +89,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate", "tailwind-scrollbar")],
 }

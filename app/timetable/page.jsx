@@ -47,7 +47,7 @@ const TimetablePage = () => {
                 <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
             </header>
 
-            <main className="overflow-x-auto">
+            <main className="overflow-x-auto scrollbar-thin scrollbar-thumb-red scrollbar-track-darkGray">
                 <div className="flex space-x-8">
                     {daysOfWeek.map(day => {
                         const classes = getClassesByDay(day);

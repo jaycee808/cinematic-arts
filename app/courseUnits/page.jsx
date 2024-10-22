@@ -81,7 +81,7 @@ const CourseUnitsPage = () => {
     return (
         <div className="px-4 lg:px-24 py-6 font-interTight">
             <header className="mb-8">
-                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Course Units</h1>
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">Course Units</h1>
             </header>
 
             <div className="flex flex-col lg:flex-row">

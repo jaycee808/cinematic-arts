@@ -44,7 +44,7 @@ const TimetablePage = () => {
     return (
         <div className="px-4 lg:px-24 py-6 font-interTight">
             <header className="mb-8">
-                <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
             </header>
 
             <main className="overflow-x-auto scrollbar-thin scrollbar-thumb-red scrollbar-track-darkGray">
@@ -53,7 +53,7 @@ const TimetablePage = () => {
                         const classes = getClassesByDay(day);
                         return (
                             <div key={day} className="min-w-[300px] lg:min-w-[350px]">
-                                <div className="mb-6 p-6 text-white rounded-lg shadow-lg">
+                                <div className="mb-6 p-6 text-white">
                                     <h2 className="text-3xl font-bold uppercase tracking-wide mb-4">{day}</h2>
                                     {classes.length > 0 ? (
                                         classes.map((classItem, index) => (

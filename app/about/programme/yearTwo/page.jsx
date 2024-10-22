@@ -5,8 +5,9 @@ import React from 'react';
 const YearTwo = () => {
     return (
         <div className="p-6 lg:px-24 font-interTight">
-            <header className="p-4 border-b">
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-red">Year Two - Deepening Your Understanding</h1>
+            <header>
+                <h2 className="text-xl font-extrabold tracking-tight text-ghostWhite">Year Two</h2>
+                <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-red">Deepening Your Understanding</h1>
             </header>
             <section className="mt-8 space-y-8 text-lg">
                 <div className="p-4 border border-darkGray rounded-lg shadow-md">

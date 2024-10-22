@@ -25,7 +25,7 @@ const NavBar = () => {
                     <div className="relative">
                         <button
                             onClick={toggleAboutDropdown}
-                            className="text-red hover:text-brightRed"
+                            className="text-ghostWhite hover:text-red"
                         >
                             About
                         </button>
@@ -62,9 +62,9 @@ const NavBar = () => {
                             </div>
                         )}
                     </div>
-                    <Link href="/courseUnits" className="text-red hover:text-brightRed" onClick={closeDropdowns}>Course Units</Link>
-                    <Link href="/timetable" className="text-red hover:text-brightRed" onClick={closeDropdowns}>Timetable</Link>
-                    <Link href="/faculty" className="text-red hover:text-brightRed" onClick={closeDropdowns}>Faculty</Link>
+                    <Link href="/courseUnits" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Course Units</Link>
+                    <Link href="/timetable" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Timetable</Link>
+                    <Link href="/faculty" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Faculty</Link>
                 </div>
             </div>
         </nav>

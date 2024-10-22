@@ -193,7 +193,7 @@ const CourseUnitsPage = () => {
                 </main>
 
                 {/* Selected Units Section */}
-                <aside className="lg:w-1/4 pl-6">
+                <aside className="lg:w-1/4 pl-6 py-8">
                     <div>
                         <h2 className="text-3xl font-semibold tracking-tight mb-4 text-red">Total Credits</h2>
                         <p className="leading-7 text-lg">Max: {MAX_CREDITS}</p>

@@ -1,16 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-    Card,
-    CardContent,
-} from "@/components/ui/card";
 
 const TimetablePage = () => {
     const [courseUnits, setCourseUnits] = useState([]);
@@ -57,41 +47,31 @@ const TimetablePage = () => {
                 <h1 className="text-5xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
             </header>
 
-            <main className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                {daysOfWeek.map(day => {
-                    const classes = getClassesByDay(day);
-                    return (
-                        <React.Fragment key={day}>
-                            <div className="col-span-1 lg:col-span-1">
-                                <h2 className="text-3xl font-semibold uppercase tracking-tight pb-4 lg:pb-6 border-b lg:border-none lg:mt-6">{day}</h2>
+            <main className="overflow-x-auto">
+                <div className="flex space-x-8">
+                    {daysOfWeek.map(day => {
+                        const classes = getClassesByDay(day);
+                        return (
+                            <div key={day} className="min-w-[300px] lg:min-w-[350px]">
+                                <div className="mb-6 p-6 text-white rounded-lg shadow-lg">
+                                    <h2 className="text-3xl font-bold uppercase tracking-wide mb-4">{day}</h2>
+                                    {classes.length > 0 ? (
+                                        classes.map((classItem, index) => (
+                                            <div key={index} className="mb-4">
+                                                <h3 className="text-2xl font-semibold text-red">{classItem.title}</h3>
+                                                <p className="text-lg text-lightGray">Teacher: {classItem.teacher}</p>
+                                                <p className="text-lg">Time: {classItem.classStart} - {classItem.classEnd}</p>
+                                                <p className="text-lg">Type: {classItem.classType}</p>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <p className="text-lightGray">No classes scheduled.</p>
+                                    )}
+                                </div>
                             </div>
-                            <div className="col-span-4 lg:col-span-4">
-                                {classes.length > 0 ? (
-                                    classes.map((classItem, index) => (
-                                        <Card key={index} className="mb-4 border border-gray-300 rounded-lg shadow-md">
-                                            <CardContent>
-                                                <Accordion type="single" collapsible>
-                                                    <AccordionItem value={`item-${index}`}>
-                                                        <AccordionTrigger>
-                                                            <h3 className="text-2xl font-semibold tracking-tight text-red">{classItem.title}</h3>
-                                                        </AccordionTrigger>
-                                                        <AccordionContent>
-                                                            <p className="mt-4 leading-7">Teacher: {classItem.teacher}</p>
-                                                            <p className="leading-7 mt-4">Type: {classItem.classType}</p>
-                                                            <p className="leading-7 mt-4">Time: {classItem.classStart} - {classItem.classEnd}</p>
-                                                        </AccordionContent>
-                                                    </AccordionItem>
-                                                </Accordion>
-                                            </CardContent>
-                                        </Card>
-                                    ))
-                                ) : (
-                                    <p className="leading-7 mt-4">No classes scheduled.</p>
-                                )}
-                            </div>
-                        </React.Fragment>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </main>
         </div>
     );

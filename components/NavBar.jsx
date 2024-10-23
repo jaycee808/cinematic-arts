@@ -16,7 +16,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav className="p-6 lg:px-12 px-2">
+        <nav className="px-4 lg:px-12 py-4">
             <div>
                 <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-2 mb-4 font-anton">
                     <Link href="/">CINEMATIC ARTS<span className="text-red">.</span></Link>

@@ -92,9 +92,9 @@ const Faculty = () => {
     ];
 
     return (
-        <div className="p-6 lg:px-12 px-2 font-interTight">
-            <header className="mb-8">
-            <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-red">Faculty</h1>
+        <div className="px-4 lg:px-12 font-interTight">
+            <header className="mb-8 py-6 border-b">
+            <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">Faculty</h1>
             </header>
             <section className="mt-8 space-y-8">
                 {teachers.map((teacher, index) => (

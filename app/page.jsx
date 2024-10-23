@@ -17,11 +17,11 @@ const HomePage = () => {
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-                    <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-white text-center">
+                    <h1 className="text-4xl lg:text-8xl font-extrabold tracking-tight text-white text-center">
                         Welcome to
                         <br />The Cinematic Arts Institute
                     </h1>
-                    <p className="leading-7 mt-6 text-lg lg:text-xl text-white text-center">
+                    <p className="leading-7 mt-6 text-xl text-white text-center">
                         Where stories come to life
                     </p>
                 </div>
@@ -37,16 +37,16 @@ const HomePage = () => {
             </section>
 
             <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
-                <h2 className="text-4xl font-semibold tracking-tight mb-6 text-lightGray">
+                <h2 className="text-2xl lg:text-4xl font-semibold tracking-tight mb-6 text-lightGray">
                     Introduction to the Institute
                 </h2>
-                <p className="leading-7 text-lg lg:text-xl">
+                <p className="leading-7 text-xl">
                     At The Cinematic Arts Institute, our mission is to nurture and inspire the next generation of filmmakers, storytellers, and critical thinkers. Since our founding in 1996, we've grown into a premier institution for film education, recognised globally for our commitment to academic excellence, creative expression, and cultural diversity.
                 </p>
             </section>
 
             <section className="mt-16 mx-auto max-w-6xl px-4 lg:px-24 font-interTight">
-                <h2 className="text-4xl font-semibold tracking-tight mb-6 text-lightGray">
+                <h2 className="text-2xl lg:text-4xl font-semibold tracking-tight mb-6 text-lightGray">
                     Overview of the BA (Hons) Cinematic Arts Programme
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ const HomePage = () => {
                             Year One
                         </Link>
 
-                        <p className="leading-7 text-lg">
+                        <p className="leading-7 text-xl">
                             In Year One, you will lay the foundational stones of your cinematic education with modules such as Introduction to Film Studies and Film Production Fundamentals.
                         </p>
                     </div>
@@ -66,7 +66,7 @@ const HomePage = () => {
                             Year Two
                         </Link>
 
-                        <p className="leading-7 text-lg">
+                        <p className="leading-7 text-xl">
                             In Year Two, you will deepen your understanding with courses like Film & Society and Documentary Filmmaking.
                         </p>
                     </div>

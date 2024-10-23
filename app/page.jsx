@@ -29,10 +29,10 @@ const HomePage = () => {
 
             <section className="mt-10 flex justify-center space-x-4 font-interTight">
                 <Link href="/courseUnits">
-                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white text-xl">Course Units</Button>
+                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white lg:text-xl sm:text-lg">Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white text-xl">View Timetable</Button>
+                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white lg:text-xl sm:text-lg">View Timetable</Button>
                 </Link>
             </section>
 

@@ -92,7 +92,7 @@ const Faculty = () => {
     ];
 
     return (
-        <div className="p-6 lg:px-24 font-interTight">
+        <div className="p-6 lg:px-12 px-2 font-interTight">
             <header className="mb-8">
             <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-red">Faculty</h1>
             </header>

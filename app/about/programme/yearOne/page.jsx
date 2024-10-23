@@ -4,7 +4,7 @@ import React from 'react';
 
 const YearOne = () => {
     return (
-        <div className="p-6 lg:px-24 font-interTight">
+        <div className="p-6 lg:px-12 px-2 font-interTight">
             <header>
                 <h2 className="text-xl font-extrabold tracking-tight text-ghostWhite">Year One</h2>
                 <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-red">Building Foundations</h1>

@@ -81,7 +81,7 @@ const CourseUnitsPage = () => {
     return (
         <div className="px-4 lg:px-12 font-interTight">
             <header className="mb-8 py-6 border-b">
-                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">Course Units</h1>
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-yellow">Course Units</h1>
             </header>
 
             <div className="flex flex-col lg:flex-row">
@@ -93,7 +93,7 @@ const CourseUnitsPage = () => {
                             {mandatoryUnits.map(unit => (
                                 <Card key={unit._id} className="border border-gray-300 rounded-lg shadow-md">
                                     <CardHeader>
-                                        <CardTitle className="text-3xl lg:text-4xl font-semibold tracking-tight text-red">{unit.title}</CardTitle>
+                                        <CardTitle className="text-3xl lg:text-4xl font-semibold tracking-tight text-yellow">{unit.title}</CardTitle>
                                         <p className="text-lightGray mt-2 text-lg">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
@@ -144,7 +144,7 @@ const CourseUnitsPage = () => {
                             {optionalUnits.map(unit => (
                                 <Card key={unit._id} className="border border-gray-300 rounded-lg shadow-md">
                                     <CardHeader>
-                                        <CardTitle className="text-3xl lg:text-4xl font-semibold tracking-tight text-red">{unit.title}</CardTitle>
+                                        <CardTitle className="text-3xl lg:text-4xl font-semibold tracking-tight text-yellow">{unit.title}</CardTitle>
                                         <p className="text-lightGray mt-2 text-lg">{unit.teacher}</p>
                                     </CardHeader>
                                     <CardContent>
@@ -182,7 +182,7 @@ const CourseUnitsPage = () => {
                                                 </AccordionContent>
                                             </AccordionItem>
                                         </Accordion>
-                                        <Button variant="outline" onClick={() => handleSelectUnit(unit)} className="mt-4 text-xl uppercase bg-red">
+                                        <Button variant="outline" onClick={() => handleSelectUnit(unit)} className="mt-4 text-xl uppercase bg-yellow text-black">
                                             {selectedUnits.find(selectedUnit => selectedUnit._id === unit._id) ? 'Remove' : 'Select'}
                                         </Button>
                                     </CardContent>
@@ -195,7 +195,7 @@ const CourseUnitsPage = () => {
                 {/* Selected Units Section */}
                 <aside className="lg:w-1/4 pl-6 py-8">
                     <div>
-                        <h2 className="text-3xl font-semibold tracking-tight mb-4 text-red">Total Credits</h2>
+                        <h2 className="text-3xl font-semibold tracking-tight mb-4 text-yellow">Total Credits</h2>
                         <p className="leading-7 text-lg">Max: {MAX_CREDITS}</p>
                         <p className="leading-7 text-lg">Chosen: {selectedCredits}</p>
                         <p className="leading-7 text-lg">Left: {creditsLeft}</p>
@@ -203,7 +203,7 @@ const CourseUnitsPage = () => {
 
                     {selectedUnits.length > 0 && (
                         <div className="mt-8">
-                            <h3 className="text-3xl font-semibold tracking-tight text-red">Selected Units</h3>
+                            <h3 className="text-3xl font-semibold tracking-tight text-yellow">Selected Units</h3>
                             <ul className="mt-4 list-disc ml-6 text-lg">
                                 {selectedUnits.map(unit => (
                                     <li key={unit._id} className="mt-2">{unit.title}</li>

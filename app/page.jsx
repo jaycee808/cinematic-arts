@@ -17,11 +17,11 @@ const HomePage = () => {
                     className="w-full h-full"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-                    <h1 className="text-4xl lg:text-8xl font-extrabold tracking-tight text-white text-center">
+                    <h1 className="text-4xl lg:text-8xl font-extrabold tracking-tight text-ghostWhite text-center">
                         Welcome to
                         <br />The Cinematic Arts Institute
                     </h1>
-                    <p className="leading-7 mt-6 text-xl text-white text-center">
+                    <p className="leading-7 mt-6 text-xl text-ghostWhite text-center">
                         Where stories come to life
                     </p>
                 </div>
@@ -29,10 +29,10 @@ const HomePage = () => {
 
             <section className="mt-10 flex justify-center space-x-4 font-interTight">
                 <Link href="/courseUnits">
-                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white lg:text-xl sm:text-lg">Course Units</Button>
+                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-darkGray text-black lg:text-xl sm:text-lg">Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-red hover:bg-brightRed border-2 border-white text-white lg:text-xl sm:text-lg">View Timetable</Button>
+                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-darkGray text-black lg:text-xl sm:text-lg">View Timetable</Button>
                 </Link>
             </section>
 
@@ -52,7 +52,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
 
-                        <Link href="/about/programme/yearOne" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
+                        <Link href="/about/programme/yearOne" className="block text-2xl font-semibold tracking-tight text-yellow hover:text-yellowHover mb-4">
                             Year One
                         </Link>
 
@@ -62,7 +62,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearTwo" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
+                        <Link href="/about/programme/yearTwo" className="block text-2xl font-semibold tracking-tight text-yellow hover:text-yellowHover mb-4">
                             Year Two
                         </Link>
 
@@ -72,7 +72,7 @@ const HomePage = () => {
                     </div>
                     <div className="p-6 border border-gray-300 rounded-lg shadow-md">
                         
-                        <Link href="/about/programme/yearThree" className="block text-2xl font-semibold tracking-tight text-red hover:text-brightRed mb-4">
+                        <Link href="/about/programme/yearThree" className="block text-2xl font-semibold tracking-tight text-yellow hover:text-hoverYellow mb-4">
                             Year Three
                         </Link>
 

@@ -6,7 +6,7 @@ const Institute = () => {
     return (
         <div className="px-4 lg:px-12 font-interTight">
             <header className="mb-8 py-6 border-b">
-                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">The Institute</h1>
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-yellow">The Institute</h1>
             </header>
 
             <section className="my-8">

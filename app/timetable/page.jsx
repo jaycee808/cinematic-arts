@@ -44,10 +44,10 @@ const TimetablePage = () => {
     return (
         <div className="px-4 lg:px-12 font-interTight">
             <header className="mb-8 py-6 border-b">
-                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-red">Your Timetable</h1>
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-yellow">Your Timetable</h1>
             </header>
 
-            <main className="overflow-x-auto scrollbar-thin scrollbar-thumb-red scrollbar-track-darkGray">
+            <main className="overflow-x-auto scrollbar-thin scrollbar-thumb-yellow scrollbar-track-darkGray">
                 <div className="flex space-x-8">
                     {daysOfWeek.map(day => {
                         const classes = getClassesByDay(day);
@@ -58,7 +58,7 @@ const TimetablePage = () => {
                                     {classes.length > 0 ? (
                                         classes.map((classItem, index) => (
                                             <div key={index} className="mb-4">
-                                                <h3 className="text-2xl font-semibold text-red">{classItem.title}</h3>
+                                                <h3 className="text-2xl font-semibold text-yellow">{classItem.title}</h3>
                                                 <p className="text-lg text-lightGray">Teacher: {classItem.teacher}</p>
                                                 <p className="text-lg">Time: {classItem.classStart} - {classItem.classEnd}</p>
                                                 <p className="text-lg">Type: {classItem.classType}</p>

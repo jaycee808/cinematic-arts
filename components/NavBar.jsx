@@ -19,13 +19,13 @@ const NavBar = () => {
         <nav className="px-4 lg:px-12 py-4">
             <div>
                 <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-2 mb-4 font-anton">
-                    <Link href="/">CINEMATIC ARTS<span className="text-red">.</span></Link>
+                    <Link href="/">CINEMATIC ARTS<span className="text-yellow">.</span></Link>
                 </div>
                 <div className="navbar flex lg:justify-end sm:justify-start space-x-4 lg:text-xl sm:text-lg font-interTight">
                     <div className="relative">
                         <button
                             onClick={toggleAboutDropdown}
-                            className="text-ghostWhite hover:text-red"
+                            className="text-ghostWhite hover:text-yellow"
                         >
                             About
                         </button>
@@ -62,9 +62,9 @@ const NavBar = () => {
                             </div>
                         )}
                     </div>
-                    <Link href="/courseUnits" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Course Units</Link>
-                    <Link href="/timetable" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Timetable</Link>
-                    <Link href="/faculty" className="text-ghostWhite hover:text-red" onClick={closeDropdowns}>Faculty</Link>
+                    <Link href="/courseUnits" className="text-ghostWhite hover:text-yellowHover" onClick={closeDropdowns}>Course Units</Link>
+                    <Link href="/timetable" className="text-ghostWhite hover:text-yellowHover" onClick={closeDropdowns}>Timetable</Link>
+                    <Link href="/faculty" className="text-ghostWhite hover:text-yellowHover" onClick={closeDropdowns}>Faculty</Link>
                 </div>
             </div>
         </nav>

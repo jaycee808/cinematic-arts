@@ -7,7 +7,7 @@ const YearOne = () => {
         <div className="p-6 lg:px-12 px-2 font-interTight">
             <header>
                 <h2 className="text-xl font-extrabold tracking-tight text-ghostWhite">Year One</h2>
-                <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-red border-b">Building Foundations</h1>
+                <h1 className="text-3xl font-extrabold tracking-tight lg:text-6xl text-yellow border-b">Building Foundations</h1>
             </header>
             <section className="mt-8 space-y-8 text-lg">
                 <div className="p-4 border border-darkGray rounded-lg shadow-md">

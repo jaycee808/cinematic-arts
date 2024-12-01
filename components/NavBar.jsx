@@ -18,7 +18,7 @@ const NavBar = () => {
     return (
         <nav className="px-4 lg:px-12 py-4">
             <div>
-                <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-2 mb-4 font-anton">
+                <div id="logo" className="text-5xl md:text-8xl font-bold border-b-2 pb-6 mb-4 font-antonio">
                     <Link href="/">CINEMATIC ARTS<span className="text-yellow">.</span></Link>
                 </div>
                 <div className="navbar flex lg:justify-end sm:justify-start space-x-4 lg:text-xl sm:text-lg font-interTight">

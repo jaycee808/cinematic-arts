@@ -14,25 +14,25 @@ const HomePage = () => {
                     alt="Banner Image"
                     layout="fill"
                     objectFit="cover"
-                    className="w-full h-full"
+                    className="px-4 lg:px-8 py-4"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-                    <h1 className="text-4xl lg:text-8xl font-extrabold tracking-tight text-ghostWhite text-center">
+                    <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-ghostWhite text-center">
                         Welcome to
                         <br />The Cinematic Arts Institute
                     </h1>
-                    <p className="leading-7 mt-6 text-xl text-ghostWhite text-center">
+                    <p className="leading-7 mt-6 text-2xl text-ghostWhite text-center">
                         Where stories come to life
                     </p>
                 </div>
             </div>
 
-            <section className="mt-10 flex justify-center space-x-4 font-interTight">
+            <section className="mt-2 flex justify-center space-x-4 font-antonio">
                 <Link href="/courseUnits">
-                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-darkGray text-black lg:text-xl sm:text-lg">Course Units</Button>
+                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-ghostWhite text-black lg:text-2xl p-5 lg:p-6 text-xl uppercase">Course Units</Button>
                 </Link>
                 <Link href="/timetable">
-                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-darkGray text-black lg:text-xl sm:text-lg">View Timetable</Button>
+                    <Button className="bg-yellow hover:bg-yellowHover border-2 border-ghostWhite text-black lg:text-2xl p-5 lg:p-6 text-xl uppercase">View Timetable</Button>
                 </Link>
             </section>
 

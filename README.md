@@ -12,7 +12,7 @@ Cinematic Arts Institute is an interactive platform designed for film students t
 ## Screenshot
 
 <p align="center">
-  <img src="./public/assets/images/cinematic-arts-screenshot.png" width="1000" height="auto" title="Screenshot of application">
+  <img src="./public/assets/images/cine-arts-screenshot.png" width="1000" height="auto" title="Screenshot of application">
 </p>
 
 ## Link to deployed site
